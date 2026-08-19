@@ -1,0 +1,824 @@
+code,mets,major_heading,activity,flag,mhn,reason
+1003.0,14.0,bicycling,"bicycling, mountain, uphill, vigorous",,"1,4,5","Represents self-expression, challenge, or personal fulfillment."
+1004.0,16.0,bicycling,"bicycling, mountain, competitive, racing",,4,"Involves achievement, recognition, or building self-esteem."
+1008.0,8.5,bicycling,"bicycling, BMX",,"3,4,5",General physical activity contributing to health and body needs.
+1009.0,8.5,bicycling,"bicycling, mountain, general",,5,"Represents self-expression, challenge, or personal fulfillment."
+1010.0,4.0,bicycling,"bicycling, <10 mph, leisure, to work or for pleasure (Taylor Code 115)",,5,Supports basic physical functioning and body maintenance.
+1011.0,6.8,bicycling,"bicycling, to/from work, self selected pace",,1,"Related to maintaining safety, stability, or health security."
+1013.0,5.8,bicycling,"bicycling, on dirt or farm road, moderate pace",,"1,5",General physical activity contributing to health and body needs.
+1015.0,7.5,bicycling,"bicycling, general",,5,General physical activity contributing to health and body needs.
+1018.0,3.5,bicycling,"bicycling, leisure, 5.5 mph",,5,Supports basic physical functioning and body maintenance.
+1019.0,5.8,bicycling,"bicycling, leisure, 9.4 mph",,5,Supports basic physical functioning and body maintenance.
+1020.0,6.8,bicycling,"bicycling, 10-11.9 mph, leisure, slow, light effort",,5,Supports basic physical functioning and body maintenance.
+1030.0,8.0,bicycling,"bicycling, 12-13.9 mph, leisure, moderate effort",,5,Supports basic physical functioning and body maintenance.
+1040.0,10.0,bicycling,"bicycling, 14-15.9 mph, racing or leisure, fast, vigorous effort",,4,Supports basic physical functioning and body maintenance.
+1050.0,12.0,bicycling,"bicycling, 16-19 mph, racing/not drafting or > 19 mph drafting, very fast, racing general",,"1,3,4,5","Involves achievement, recognition, or building self-esteem."
+1060.0,15.8,bicycling,"bicycling, > 20 mph, racing, not drafting",,"4,5","Involves achievement, recognition, or building self-esteem."
+1065.0,8.5,bicycling,"bicycling, 12 mph, seated, hands on brake hoods or bar drops, 80 rpm",,5,Supports basic physical functioning and body maintenance.
+1066.0,9.0,bicycling,"bicycling, 12 mph, standing, hands on brake hoods, 60 rpm",,1,General physical activity contributing to health and body needs.
+1070.0,5.0,bicycling,unicycling,,5,General physical activity contributing to health and body needs.
+2001.0,2.3,conditioning exercise,"activity promoting video game (e.g., Wii Fit), light effort (e.g., balance, yoga)",,1,Supports basic physical functioning and body maintenance.
+2003.0,3.8,conditioning exercise,"activity promoting video game (e.g., Wii Fit), moderate effort (e.g., aerobic, resistance)",,1,General physical activity contributing to health and body needs.
+2005.0,7.2,conditioning exercise,"activity promoting video/arcade game (e.g., Exergaming, Dance Dance Revolution), vigorous effort",,1,Involves social connection or group belonging.
+2008.0,5.0,conditioning exercise,"army type obstacle course exercise, boot camp training program",,1,"Related to maintaining safety, stability, or health security."
+2010.0,7.0,conditioning exercise,"bicycling, stationary, general",,1,General physical activity contributing to health and body needs.
+2011.0,3.5,conditioning exercise,"bicycling, stationary, 30-50 watts, very light to light effort",,1,Supports basic physical functioning and body maintenance.
+2012.0,6.8,conditioning exercise,"bicycling, stationary, 90-100 watts, moderate to vigorous effort",,1,General physical activity contributing to health and body needs.
+2013.0,8.8,conditioning exercise,"bicycling, stationary, 101-160 watts, vigorous effort",,1,General physical activity contributing to health and body needs.
+2014.0,11.0,conditioning exercise,"bicycling, stationary, 161-200 watts, vigorous effort",,1,General physical activity contributing to health and body needs.
+2015.0,14.0,conditioning exercise,"bicycling, stationary, 201-270 watts, very vigorous effort",,1,General physical activity contributing to health and body needs.
+2017.0,4.8,conditioning exercise,"bicycling, stationary, 51-89 watts, light-to-moderate effort",,1,Supports basic physical functioning and body maintenance.
+2019.0,8.5,conditioning exercise,"bicycling, stationary, RPM/Spin bike class",,2,General physical activity contributing to health and body needs.
+2020.0,8.0,conditioning exercise,"calisthenics (e.g., push ups, sit ups, pull-ups, jumping jacks), vigorous effort",,1,General physical activity contributing to health and body needs.
+2022.0,3.8,conditioning exercise,"calisthenics (e.g., push ups, sit ups, pull-ups, lunges), moderate effort",,1,General physical activity contributing to health and body needs.
+2024.0,2.8,conditioning exercise,"calisthenics (e.g., situps, abdominal crunches), light effort",,1,Supports basic physical functioning and body maintenance.
+2030.0,3.5,conditioning exercise,"calisthenics, light or moderate effort, general (e.g., back exercises), going up & down from floor (Taylor Code 150)",,1,Supports basic physical functioning and body maintenance.
+2035.0,4.3,conditioning exercise,"circuit training, moderate effort",,1,"Related to maintaining safety, stability, or health security."
+2040.0,8.0,conditioning exercise,"circuit training, including kettlebells, some aerobic movement with minimal rest, general, vigorous intensity",,1,Supports basic physical functioning and body maintenance.
+2045.0,3.5,conditioning exercise,CurvesTM exercise routines in women,,"1,3",General physical activity contributing to health and body needs.
+2048.0,5.0,conditioning exercise,"Elliptical trainer, moderate effort",,1,General physical activity contributing to health and body needs.
+2050.0,6.0,conditioning exercise,"resistance training (weight lifting, free weight, nautilus or universal), power lifting or body building, vigorous effort (Taylor Code 210)",,1,"Related to maintaining safety, stability, or health security."
+2052.0,5.0,conditioning exercise,"resistance (weight) training, squats , slow or explosive effort",,"1,4",Supports basic physical functioning and body maintenance.
+2054.0,3.5,conditioning exercise,"resistance (weight) training, multiple exercises, 8-15 repetitions at varied resistance",,1,"Related to maintaining safety, stability, or health security."
+2060.0,5.5,conditioning exercise,"health club exercise, general (Taylor Code 160)",,2,Involves social connection or group belonging.
+2061.0,5.0,conditioning exercise,"health club exercise classes, general, gym/weight training combined in one visit",,"1,3,4","Related to maintaining safety, stability, or health security."
+2062.0,7.8,conditioning exercise,"health club exercise, conditioning classes",,1,Involves social connection or group belonging.
+2064.0,3.8,conditioning exercise,"home exercise, general",,"1,4",General physical activity contributing to health and body needs.
+2065.0,9.0,conditioning exercise,"stair-treadmill ergometer, general",,1,General physical activity contributing to health and body needs.
+2068.0,12.3,conditioning exercise,"rope skipping, general",,1,General physical activity contributing to health and body needs.
+2070.0,6.0,conditioning exercise,"rowing, stationary ergometer, general, vigorous effort",,1,General physical activity contributing to health and body needs.
+2071.0,4.8,conditioning exercise,"rowing, stationary, general, moderate effort",,1,General physical activity contributing to health and body needs.
+2072.0,7.0,conditioning exercise,"rowing, stationary, 100 watts, moderate effort",,1,General physical activity contributing to health and body needs.
+2073.0,8.5,conditioning exercise,"rowing, stationary, 150 watts, vigorous effort",,1,General physical activity contributing to health and body needs.
+2074.0,12.0,conditioning exercise,"rowing, stationary, 200 watts, very vigorous effort",,"1,4",General physical activity contributing to health and body needs.
+2080.0,6.8,conditioning exercise,"ski machine, general",,2,General physical activity contributing to health and body needs.
+2085.0,11.0,conditioning exercise,"slide board exercise, general",,1,General physical activity contributing to health and body needs.
+2090.0,6.0,conditioning exercise,"slimnastics, jazzercise",,1,General physical activity contributing to health and body needs.
+2101.0,2.3,conditioning exercise,"stretching, mild",,1,Supports basic physical functioning and body maintenance.
+2105.0,3.0,conditioning exercise,"pilates, general",,1,General physical activity contributing to health and body needs.
+2110.0,6.8,conditioning exercise,"teaching exercise class (e.g., aerobic, water)",,1,General physical activity contributing to health and body needs.
+2112.0,2.8,conditioning exercise,"therapeutic exercise ball, Fitball exercise",,1,General physical activity contributing to health and body needs.
+2115.0,2.8,conditioning exercise,"upper body exercise, arm ergometer",,1,General physical activity contributing to health and body needs.
+2117.0,4.3,conditioning exercise,"upper body exercise, stationary bicycle - Airdyne (arms only) 40 rpm, moderate",,1,General physical activity contributing to health and body needs.
+2120.0,5.3,conditioning exercise,"water aerobics, water calisthenics, water exercise",,1,General physical activity contributing to health and body needs.
+2135.0,1.3,conditioning exercise,"whirlpool, sitting",,1,General physical activity contributing to health and body needs.
+2140.0,2.3,conditioning exercise,"video exercise workouts, TV conditioning programs (e.g., yoga, stretching), light effort",,1,Supports basic physical functioning and body maintenance.
+2143.0,4.0,conditioning exercise,"video exercise workouts, TV conditioning programs (e.g., cardio-resistance), moderate effort",,1,"Related to maintaining safety, stability, or health security."
+2146.0,6.0,conditioning exercise,"video exercise workouts, TV conditioning programs (e.g., cardio-resistance), vigorous effort",,"2,4","Related to maintaining safety, stability, or health security."
+2150.0,2.5,conditioning exercise,"yoga, Hatha",,1,Supports basic physical functioning and body maintenance.
+2160.0,4.0,conditioning exercise,"yoga, Power",,1,Supports basic physical functioning and body maintenance.
+2170.0,2.0,conditioning exercise,"yoga, Nadisodhana",,1,Supports basic physical functioning and body maintenance.
+2180.0,3.3,conditioning exercise,"yoga, Surya Namaskar",,1,Supports basic physical functioning and body maintenance.
+2200.0,5.3,conditioning exercise,"native New Zealander physical activities (e.g., Haka Powhiri, Moteatea, Waita Tira, Whakawatea, etc.), general, moderate effort",,1,Supports basic physical functioning and body maintenance.
+2205.0,6.8,conditioning exercise,"native New Zealander physical activities (e.g., Haka, Taiahab), general, vigorous effort",,1,General physical activity contributing to health and body needs.
+3010.0,5.0,dancing,"ballet, modern, or jazz, general, rehearsal or class",,"3,4,5",General physical activity contributing to health and body needs.
+3012.0,6.8,dancing,"ballet, modern, or jazz, performance, vigorous effort",,"3,4,5","Involves achievement, recognition, or building self-esteem."
+3014.0,4.8,dancing,tap,,5,General physical activity contributing to health and body needs.
+3015.0,7.3,dancing,"aerobic, general",,1,General physical activity contributing to health and body needs.
+3016.0,7.5,dancing,"aerobic, step, with 6 - 8 inch step",,"1,5",General physical activity contributing to health and body needs.
+3017.0,9.5,dancing,"aerobic, step, with 10 - 12 inch step",,"1,5",General physical activity contributing to health and body needs.
+3018.0,5.5,dancing,"aerobic, step, with 4-inch step",,5,General physical activity contributing to health and body needs.
+3019.0,8.5,dancing,"bench step class, general",,"1,3,4,5",General physical activity contributing to health and body needs.
+3020.0,5.0,dancing,"aerobic, low impact",,"1,3,4,5",General physical activity contributing to health and body needs.
+3021.0,7.3,dancing,"aerobic, high impact",,"1,3",General physical activity contributing to health and body needs.
+3022.0,10.0,dancing,aerobic dance wearing 10-15 lb weights,,1,Involves social connection or group belonging.
+3025.0,4.5,dancing,"ethnic or cultural dancing (e.g., Greek, Middle Eastern, hula, salsa, merengue, bamba y plena, flamenco, belly, and swing)",,"3,4,5",General physical activity contributing to health and body needs.
+3030.0,5.5,dancing,"ballroom, fast (Taylor Code 125)",,"3,4,5",General physical activity contributing to health and body needs.
+3031.0,7.8,dancing,"general dancing (e.g., disco, folk, Irish step dancing, line dancing, polka, contra, country)",,"3,5",General physical activity contributing to health and body needs.
+3038.0,11.3,dancing,"ballroom dancing, competitive, general",,"3,4,5","Involves achievement, recognition, or building self-esteem."
+3040.0,3.0,dancing,"ballroom, slow (e.g., waltz, foxtrot, slow dancing, samba, tango, 19th century dance, mambo, cha cha)",,"3,4,5",Supports basic physical functioning and body maintenance.
+3050.0,5.5,dancing,Anishinaabe Jingle Dancing,,"3,5",General physical activity contributing to health and body needs.
+3060.0,3.5,dancing,"Caribbean dance (Abakua, Beguine, Bellair, Bongo, Brukin's, Caribbean Quadrills, Dinki Mini, Gere, Gumbay, Ibo, Jonkonnu, Kumina, Oreisha, Jambu)",,"3,4,5",Involves social connection or group belonging.
+4001.0,3.5,fishing and hunting,"fishing, general",,1,General physical activity contributing to health and body needs.
+4005.0,4.5,fishing and hunting,"fishing, crab fishing",,1,General physical activity contributing to health and body needs.
+4007.0,4.0,fishing and hunting,"fishing, catching fish with hands",,1,General physical activity contributing to health and body needs.
+4010.0,4.3,fishing and hunting,"fishing related, digging worms, with shovel",,1,General physical activity contributing to health and body needs.
+4020.0,4.0,fishing and hunting,fishing from river bank and walking,,1,General physical activity contributing to health and body needs.
+4030.0,2.0,fishing and hunting,"fishing from boat or canoe, sitting",,1,General physical activity contributing to health and body needs.
+4040.0,3.5,fishing and hunting,"fishing from river bank, standing (Taylor Code 660)",,1,General physical activity contributing to health and body needs.
+4050.0,6.0,fishing and hunting,"fishing in stream, in waders (Taylor Code 670)",,"1,3,4,5",General physical activity contributing to health and body needs.
+4060.0,2.0,fishing and hunting,"fishing, ice, sitting",,1,General physical activity contributing to health and body needs.
+4061.0,1.8,fishing and hunting,"fishing, jog or line, standing, general",,1,General physical activity contributing to health and body needs.
+4062.0,3.5,fishing and hunting,"fishing, dip net, setting net and retrieving fish, general",,1,General physical activity contributing to health and body needs.
+4063.0,3.8,fishing and hunting,"fishing, set net, setting net and retrieving fish, general",,1,General physical activity contributing to health and body needs.
+4064.0,3.0,fishing and hunting,"fishing, fishing wheel, setting net and retrieving fish, general",,1,General physical activity contributing to health and body needs.
+4065.0,2.3,fishing and hunting,"fishing with a spear, standing",,1,General physical activity contributing to health and body needs.
+4070.0,2.5,fishing and hunting,"hunting, bow and arrow, or crossbow",,1,General physical activity contributing to health and body needs.
+4080.0,6.0,fishing and hunting,"hunting, deer, elk, large game (Taylor Code 170)",,"1,3,4",General physical activity contributing to health and body needs.
+4081.0,11.3,fishing and hunting,"hunting large game, dragging carcass",,1,General physical activity contributing to health and body needs.
+4083.0,4.0,fishing and hunting,hunting large marine animals,,1,General physical activity contributing to health and body needs.
+4085.0,2.5,fishing and hunting,"hunting large game, from a hunting stand, limited walking",,"1,4",General physical activity contributing to health and body needs.
+4086.0,2.0,fishing and hunting,"hunting large game from a car, plane, or boat",,4,General physical activity contributing to health and body needs.
+4090.0,2.5,fishing and hunting,"hunting, duck, wading",,1,General physical activity contributing to health and body needs.
+4095.0,3.0,fishing and hunting,"hunting, flying fox, squirrel",,1,General physical activity contributing to health and body needs.
+4100.0,5.0,fishing and hunting,"hunting, general",,1,General physical activity contributing to health and body needs.
+4110.0,6.0,fishing and hunting,"hunting, pheasants or grouse (Taylor Code 680)",,1,General physical activity contributing to health and body needs.
+4115.0,3.3,fishing and hunting,"hunting, birds",,1,General physical activity contributing to health and body needs.
+4120.0,5.0,fishing and hunting,"hunting, rabbit, squirrel, prairie chick, raccoon, small game (Taylor Code 690)",,1,General physical activity contributing to health and body needs.
+4123.0,3.3,fishing and hunting,"hunting, pigs, wild",,1,General physical activity contributing to health and body needs.
+4124.0,2.0,fishing and hunting,"trapping game, general",,1,General physical activity contributing to health and body needs.
+4125.0,9.5,fishing and hunting,"hunting, hiking with hunting gear",,1,General physical activity contributing to health and body needs.
+4130.0,2.5,fishing and hunting,"pistol shooting or trap shooting, standing",,1,General physical activity contributing to health and body needs.
+4140.0,2.3,fishing and hunting,"rifle exercises, shooting, lying down",,1,General physical activity contributing to health and body needs.
+4145.0,2.5,fishing and hunting,"rifle exercises, shooting, kneeling or standing",,1,General physical activity contributing to health and body needs.
+5010.0,3.3,home activities,"cleaning, sweeping carpet or floors, general",,2,General physical activity contributing to health and body needs.
+5011.0,2.3,home activities,"cleaning, sweeping, slow, light effort",,"1,2",Supports basic physical functioning and body maintenance.
+5012.0,3.8,home activities,"cleaning, sweeping, slow, moderate effort",,2,Supports basic physical functioning and body maintenance.
+5020.0,3.5,home activities,"cleaning, heavy or major (e.g. wash car, wash windows, clean garage), moderate effort",,2,General physical activity contributing to health and body needs.
+5021.0,3.5,home activities,"cleaning, mopping, standing, moderate effort",,2,General physical activity contributing to health and body needs.
+5022.0,3.2,home activities,"cleaning windows, washing windows, general",,"2,4",General physical activity contributing to health and body needs.
+5023.0,2.5,home activities,"mopping, standing, light effort",,2,Supports basic physical functioning and body maintenance.
+5024.0,4.5,home activities,"polishing floors, standing, walking slowly, using electric polishing machine",,2,Supports basic physical functioning and body maintenance.
+5025.0,2.8,home activities,"multiple household tasks all at once, light effort",,"1,2,4",Supports basic physical functioning and body maintenance.
+5026.0,3.5,home activities,"multiple household tasks all at once, moderate effort",,2,General physical activity contributing to health and body needs.
+5027.0,4.3,home activities,"multiple household tasks all at once, vigorous effort",,"1,2",General physical activity contributing to health and body needs.
+5030.0,3.3,home activities,"cleaning, house or cabin, general, moderate effort",,2,General physical activity contributing to health and body needs.
+5032.0,2.3,home activities,"dusting or polishing furniture, general",,2,General physical activity contributing to health and body needs.
+5035.0,3.3,home activities,"kitchen activity, general, (e.g., cooking, washing dishes, cleaning up), moderate effort",,"1,2,3",General physical activity contributing to health and body needs.
+5040.0,2.5,home activities,"cleaning, general (straightening up, changing linen, carrying out trash, light effort",,"1,2,4",Supports basic physical functioning and body maintenance.
+5041.0,1.8,home activities,"wash dishes, standing or in general (not broken into stand/walk components)",,2,General physical activity contributing to health and body needs.
+5042.0,2.5,home activities,"wash dishes, clearing dishes from table, walking, light effort",,"1,2,3",Supports basic physical functioning and body maintenance.
+5043.0,3.3,home activities,"vacuuming, general, moderate effort",,2,General physical activity contributing to health and body needs.
+5044.0,3.0,home activities,"butchering animals, small",,1,General physical activity contributing to health and body needs.
+5045.0,6.0,home activities,"butchering animal, large, vigorous effort",,1,General physical activity contributing to health and body needs.
+5046.0,2.3,home activities,"cutting and smoking fish, drying fish or meat",,1,Supports basic physical functioning and body maintenance.
+5048.0,4.0,home activities,"tanning hides, general",,1,General physical activity contributing to health and body needs.
+5049.0,3.5,home activities,"cooking or food preparation, moderate effort",,"1,3",General physical activity contributing to health and body needs.
+5050.0,2.0,home activities,"cooking or food preparation - standing or sitting or in general (not broken into stand/walk components), manual appliances, light effort",,1,Supports basic physical functioning and body maintenance.
+5051.0,2.5,home activities,"serving food, setting table, implied walking or standing",,"1,3",General physical activity contributing to health and body needs.
+5052.0,2.5,home activities,"cooking or food preparation, walking",,1,General physical activity contributing to health and body needs.
+5053.0,2.5,home activities,feeding household animals,,3,General physical activity contributing to health and body needs.
+5055.0,2.5,home activities,"putting away groceries (e.g. carrying groceries, shopping without a grocery cart), carrying packages",,1,General physical activity contributing to health and body needs.
+5056.0,7.5,home activities,carrying groceries upstairs,,1,General physical activity contributing to health and body needs.
+5057.0,3.0,home activities,cooking Indian bread on an outside stove,,1,General physical activity contributing to health and body needs.
+5060.0,2.3,home activities,"food shopping with or without a grocery cart, standing or walking",,1,General physical activity contributing to health and body needs.
+5065.0,2.3,home activities,"non-food shopping, with or without a cart, standing or walking",,2,General physical activity contributing to health and body needs.
+5070.0,1.8,home activities,ironing,,4,General physical activity contributing to health and body needs.
+5080.0,1.3,home activities,"knitting, sewing, light effort, wrapping presents, sitting",,"3,4",Supports basic physical functioning and body maintenance.
+5082.0,2.8,home activities,sewing with a machine,,5,General physical activity contributing to health and body needs.
+5090.0,2.0,home activities,"laundry, fold or hang clothes, put clothes in washer or dryer, packing suitcase, washing clothes by hand, implied standing, light effort",,1,Supports basic physical functioning and body maintenance.
+5092.0,4.0,home activities,"laundry, hanging wash, washing clothes by hand, moderate effort",,1,General physical activity contributing to health and body needs.
+5095.0,2.3,home activities,"laundry, putting away clothes, gathering clothes to pack, putting away laundry, implied walking",,"1,2",General physical activity contributing to health and body needs.
+5100.0,3.3,home activities,"making bed, changing linens",,1,General physical activity contributing to health and body needs.
+5110.0,5.0,home activities,"maple syruping/sugar bushing (including carrying buckets, carrying wood)",,"1,3",General physical activity contributing to health and body needs.
+5120.0,5.8,home activities,"moving furniture, household items, carrying boxes",,"2,4",General physical activity contributing to health and body needs.
+5121.0,5.0,home activities,"moving, lifting light loads",,2,Supports basic physical functioning and body maintenance.
+5125.0,4.8,home activities,organizing room,,2,General physical activity contributing to health and body needs.
+5130.0,3.5,home activities,"scrubbing floors, on hands and knees, scrubbing bathroom, bathtub, moderate effort",,2,General physical activity contributing to health and body needs.
+5131.0,2.0,home activities,"scrubbing floors, on hands and knees, scrubbing bathroom, bathtub, light effort",,"1,2",Supports basic physical functioning and body maintenance.
+5132.0,6.5,home activities,"scrubbing floors, on hands and knees, scrubbing bathroom, bathtub, vigorous effort",,"1,2",General physical activity contributing to health and body needs.
+5140.0,4.0,home activities,"sweeping garage, sidewalk or outside of house",,"2,4",General physical activity contributing to health and body needs.
+5146.0,3.5,home activities,"standing, packing/unpacking boxes, occasional lifting of lightweight household items, loading or unloading items in car, moderate effort",,2,Supports basic physical functioning and body maintenance.
+5147.0,3.0,home activities,"implied walking, putting away household items, moderate effort",,"2,4",General physical activity contributing to health and body needs.
+5148.0,2.5,home activities,watering plants,,"4,5",General physical activity contributing to health and body needs.
+5149.0,2.5,home activities,building a fire inside,,1,General physical activity contributing to health and body needs.
+5150.0,9.0,home activities,"moving household items upstairs, carrying boxes or furniture",,2,General physical activity contributing to health and body needs.
+5160.0,2.0,home activities,"standing, light effort tasks (pump gas, change light bulb, etc.)",,2,Supports basic physical functioning and body maintenance.
+5165.0,3.5,home activities,"walking, moderate effort tasks, non-cleaning (readying to leave, shut/lock doors, close windows, etc.)",,2,General physical activity contributing to health and body needs.
+5170.0,2.2,home activities,"sitting, playing with child(ren), light effort, only active periods",,3,Supports basic physical functioning and body maintenance.
+5171.0,2.8,home activities,"standing, playing with child(ren) light effort, only active periods",,3,Supports basic physical functioning and body maintenance.
+5175.0,3.5,home activities,"walking/running, playing with child(ren), moderate effort, only active periods",,3,General physical activity contributing to health and body needs.
+5180.0,5.8,home activities,"walking/running, playing with child(ren), vigorous effort, only active periods",,3,General physical activity contributing to health and body needs.
+5181.0,3.0,home activities,"walking and carrying small child, child weighing 15 lbs or more",,"2,3",General physical activity contributing to health and body needs.
+5182.0,2.3,home activities,"walking and carrying small child, child weighing less than 15 lbs",,3,General physical activity contributing to health and body needs.
+5183.0,2.0,home activities,"standing, holding child",,3,General physical activity contributing to health and body needs.
+5184.0,2.5,home activities,"child care, infant, general",,"3,4,5",General physical activity contributing to health and body needs.
+5185.0,2.0,home activities,"child care, sitting/kneeling (e.g., dressing, bathing, grooming, feeding, occasional lifting of child), light effort, general",,3,Supports basic physical functioning and body maintenance.
+5186.0,3.0,home activities,"child care, standing (e.g., dressing, bathing, grooming, feeding, occasional lifting of child), moderate effort",,3,General physical activity contributing to health and body needs.
+5188.0,1.5,home activities,reclining with baby,,3,General physical activity contributing to health and body needs.
+5189.0,2.0,home activities,"breastfeeding, sitting or reclining",,"1,3",General physical activity contributing to health and body needs.
+5190.0,2.5,home activities,"sit, playing with animals, light effort, only active periods",,3,Supports basic physical functioning and body maintenance.
+5191.0,2.8,home activities,"stand, playing with animals, light effort, only active periods",,3,Supports basic physical functioning and body maintenance.
+5192.0,3.0,home activities,"walk/run, playing with animals, general, light effort, only active periods",,3,Supports basic physical functioning and body maintenance.
+5193.0,4.0,home activities,"walk/run, playing with animals, moderate effort, only active periods",,3,General physical activity contributing to health and body needs.
+5194.0,5.0,home activities,"walk/run, playing with animals, vigorous effort, only active periods",,"1,3",General physical activity contributing to health and body needs.
+5195.0,3.5,home activities,"standing, bathing dog",,"2,3",General physical activity contributing to health and body needs.
+5197.0,2.3,home activities,"animal care, household animals, general",,"3,4",General physical activity contributing to health and body needs.
+5200.0,4.0,home activities,"elder care, disabled adult, bathing, dressing, moving into and out of bed, only active periods",,"1,2,3",General physical activity contributing to health and body needs.
+5205.0,2.3,home activities,"elder care, disabled adult, feeding, combing hair, light effort, only active periods",,1,Supports basic physical functioning and body maintenance.
+6010.0,3.0,home repair,airplane repair,,2,General physical activity contributing to health and body needs.
+6020.0,4.0,home repair,automobile body work,,2,"Related to maintaining safety, stability, or health security."
+6030.0,3.3,home repair,"automobile repair, light or moderate effort",,2,Supports basic physical functioning and body maintenance.
+6040.0,3.0,home repair,"carpentry, general, workshop (Taylor Code 620)",,2,"Related to maintaining safety, stability, or health security."
+6050.0,6.0,home repair,"carpentry, outside house, installing rain gutters (Taylor Code 640),carpentry, outside house, building a fence",,2,General physical activity contributing to health and body needs.
+6052.0,3.8,home repair,"carpentry, outside house, building a fence",,"2,4",General physical activity contributing to health and body needs.
+6060.0,3.3,home repair,"carpentry, finishing or refinishing cabinets or furniture",,"2,4",General physical activity contributing to health and body needs.
+6070.0,6.0,home repair,"carpentry, sawing hardwood",,"2,4",General physical activity contributing to health and body needs.
+6072.0,4.0,home repair,"carpentry, home remodeling tasks, moderate effort",,"2,4",General physical activity contributing to health and body needs.
+6074.0,2.3,home repair,"carpentry, home remodeling tasks, light effort",,2,Supports basic physical functioning and body maintenance.
+6080.0,5.0,home repair,"caulking, chinking log cabin",,2,General physical activity contributing to health and body needs.
+6090.0,4.5,home repair,"caulking, except log cabin",,2,General physical activity contributing to health and body needs.
+6100.0,5.0,home repair,cleaning gutters,,2,General physical activity contributing to health and body needs.
+6110.0,5.0,home repair,excavating garage,,2,General physical activity contributing to health and body needs.
+6120.0,5.0,home repair,hanging storm windows,,2,General physical activity contributing to health and body needs.
+6122.0,5.0,home repair,hanging sheet rock inside house,,2,General physical activity contributing to health and body needs.
+6124.0,3.0,home repair,hammering nails,,2,General physical activity contributing to health and body needs.
+6126.0,2.5,home repair,"home repair, general, light effort",,2,Supports basic physical functioning and body maintenance.
+6127.0,4.5,home repair,"home repair, general, moderate effort",,2,General physical activity contributing to health and body needs.
+6128.0,6.0,home repair,"home repair, general, vigorous effort",,2,General physical activity contributing to health and body needs.
+6130.0,4.5,home repair,laying or removing carpet,,2,General physical activity contributing to health and body needs.
+6140.0,3.8,home repair,"laying tile or linoleum,repairing appliances",,2,General physical activity contributing to health and body needs.
+6144.0,3.0,home repair,repairing appliances,,2,General physical activity contributing to health and body needs.
+6150.0,5.0,home repair,"painting, outside home (Taylor Code 650)",,2,General physical activity contributing to health and body needs.
+6160.0,3.3,home repair,"painting inside house,wallpapering, scraping paint",,"2,4,5",General physical activity contributing to health and body needs.
+6165.0,4.5,home repair,"painting, (Taylor Code 630)",,2,General physical activity contributing to health and body needs.
+6167.0,3.0,home repair,"plumbing, general",,2,General physical activity contributing to health and body needs.
+6170.0,3.0,home repair,put on and removal of tarp - sailboat,,2,General physical activity contributing to health and body needs.
+6180.0,6.0,home repair,roofing,,2,General physical activity contributing to health and body needs.
+6190.0,4.5,home repair,sanding floors with a power sander,,2,General physical activity contributing to health and body needs.
+6200.0,4.5,home repair,scraping and painting sailboat or powerboat,,2,General physical activity contributing to health and body needs.
+6205.0,2.0,home repair,sharpening tools,,2,General physical activity contributing to health and body needs.
+6210.0,5.0,home repair,spreading dirt with a shovel,,2,General physical activity contributing to health and body needs.
+6220.0,4.5,home repair,washing and waxing hull of sailboat or airplane,,2,General physical activity contributing to health and body needs.
+6225.0,2.0,home repair,washing and waxing car,,2,General physical activity contributing to health and body needs.
+6230.0,4.5,home repair,"washing fence, painting fence, moderate effort",,"2,4",General physical activity contributing to health and body needs.
+6240.0,3.3,home repair,"wiring, tapping-splicing",,2,General physical activity contributing to health and body needs.
+7010.0,1.0,inactivity quiet/light,lying quietly and watching television,,1,General physical activity contributing to health and body needs.
+7011.0,1.3,inactivity quiet/light,"lying quietly, doing nothing, lying in bed awake, listening to music (not talking or reading)",,1,General physical activity contributing to health and body needs.
+7020.0,1.3,inactivity quiet/light,sitting quietly and watching television,,1,General physical activity contributing to health and body needs.
+7021.0,1.3,inactivity quiet/light,"sitting quietly, general",,1,General physical activity contributing to health and body needs.
+7022.0,1.5,inactivity quiet/light,"sitting quietly, fidgeting, general, fidgeting hands",,1,General physical activity contributing to health and body needs.
+7023.0,1.8,inactivity quiet/light,"sitting, fidgeting feet",,1,General physical activity contributing to health and body needs.
+7024.0,1.3,inactivity quiet/light,"sitting, smoking",,1,General physical activity contributing to health and body needs.
+7025.0,1.5,inactivity quiet/light,"sitting, listening to music (not talking or reading) or watching a movie in a theater",,5,Supports basic physical functioning and body maintenance.
+7026.0,1.3,inactivity quiet/light,"sitting at a desk, resting head in hands",,1,Supports basic physical functioning and body maintenance.
+7030.0,1.0,inactivity quiet/light,sleeping,,1,Supports basic physical functioning and body maintenance.
+7040.0,1.3,inactivity quiet/light,"standing quietly, standing in a line",,1,General physical activity contributing to health and body needs.
+7041.0,1.8,inactivity quiet/light,"standing, fidgeting",,1,General physical activity contributing to health and body needs.
+7050.0,1.3,inactivity quiet/light,"reclining, writing",,"1,5",General physical activity contributing to health and body needs.
+7060.0,1.3,inactivity quiet/light,"reclining, talking or talking on phone",,"1,3",General physical activity contributing to health and body needs.
+7070.0,1.3,inactivity quiet/light,"reclining, reading",,1,General physical activity contributing to health and body needs.
+7075.0,1.0,inactivity quiet/light,meditating,,1,General physical activity contributing to health and body needs.
+8009.0,3.3,lawn and garden,"carrying, loading or stacking wood, loading/unloading or carrying lumber, light-to-moderate effort",,2,Supports basic physical functioning and body maintenance.
+8010.0,5.5,lawn and garden,"carrying, loading or stacking wood, loading/unloading or carrying lumber",,2,General physical activity contributing to health and body needs.
+8019.0,4.5,lawn and garden,"chopping wood, splitting logs, moderate effort",,4,General physical activity contributing to health and body needs.
+8020.0,6.3,lawn and garden,"chopping wood, splitting logs, vigorous effort",,2,General physical activity contributing to health and body needs.
+8025.0,3.5,lawn and garden,"clearing light brush, thinning garden, moderate effort",,4,Supports basic physical functioning and body maintenance.
+8030.0,6.3,lawn and garden,"clearing brush/land, undergrowth, or ground, hauling branches, wheelbarrow chores, vigorous effort",,"2,4",General physical activity contributing to health and body needs.
+8040.0,5.0,lawn and garden,"digging sandbox, shoveling sand",,5,General physical activity contributing to health and body needs.
+8045.0,3.5,lawn and garden,"digging, spading, filling garden, composting, light-to-moderate effort",,5,Supports basic physical functioning and body maintenance.
+8050.0,5.0,lawn and garden,"digging, spading, filling garden, compositing, (Taylor Code 590)",,5,General physical activity contributing to health and body needs.
+8052.0,7.8,lawn and garden,"digging, spading, filling garden, composting, vigorous effort",,"4,5",General physical activity contributing to health and body needs.
+8055.0,2.8,lawn and garden,driving tractor,,5,General physical activity contributing to health and body needs.
+8057.0,8.3,lawn and garden,"felling trees, large size",,2,General physical activity contributing to health and body needs.
+8058.0,5.3,lawn and garden,"felling trees, small-medium size",,2,General physical activity contributing to health and body needs.
+8060.0,5.8,lawn and garden,"gardening with heavy power tools, tilling a garden, chain saw",,"4,5",General physical activity contributing to health and body needs.
+8065.0,2.3,lawn and garden,"gardening, using containers, older adults > 60 years",,"3,4,5",General physical activity contributing to health and body needs.
+8070.0,4.0,lawn and garden,"irrigation channels, opening and closing ports",,5,General physical activity contributing to health and body needs.
+8080.0,6.3,lawn and garden,laying crushed rock,,5,General physical activity contributing to health and body needs.
+8090.0,5.0,lawn and garden,laying sod,,4,General physical activity contributing to health and body needs.
+8095.0,5.5,lawn and garden,"mowing lawn, general",,2,General physical activity contributing to health and body needs.
+8100.0,2.5,lawn and garden,"mowing lawn, riding mower (Taylor Code 550)",,4,General physical activity contributing to health and body needs.
+8110.0,6.0,lawn and garden,"mowing lawn, walk, hand mower (Taylor Code 570)",,"1,2,4",General physical activity contributing to health and body needs.
+8120.0,5.0,lawn and garden,"mowing lawn, walk, power mower, moderate or vigorous effort",,2,General physical activity contributing to health and body needs.
+8125.0,4.5,lawn and garden,"mowing lawn, power mower, light or moderate effort (Taylor Code 590)",,2,Supports basic physical functioning and body maintenance.
+8130.0,2.5,lawn and garden,"operating snow blower, walking",,2,General physical activity contributing to health and body needs.
+8135.0,2.0,lawn and garden,"planting, potting, transplanting seedlings or plants, light effort",,5,Supports basic physical functioning and body maintenance.
+8140.0,4.3,lawn and garden,"planting seedlings, shrub, stooping, moderate effort",,5,General physical activity contributing to health and body needs.
+8145.0,4.3,lawn and garden,"planting crops or garden, stooping, moderate effort",,5,General physical activity contributing to health and body needs.
+8150.0,4.5,lawn and garden,planting trees,,"4,5",General physical activity contributing to health and body needs.
+8160.0,3.8,lawn and garden,"raking lawn or leaves, moderate effort",,2,General physical activity contributing to health and body needs.
+8165.0,4.0,lawn and garden,raking lawn (Taylor Code 600),,"2,4",General physical activity contributing to health and body needs.
+8170.0,4.0,lawn and garden,raking roof with snow rake,,2,General physical activity contributing to health and body needs.
+8180.0,3.0,lawn and garden,riding snow blower,,"2,4",General physical activity contributing to health and body needs.
+8190.0,4.0,lawn and garden,"sacking grass, leaves",,4,General physical activity contributing to health and body needs.
+8192.0,5.5,lawn and garden,shoveling dirt or mud,,5,General physical activity contributing to health and body needs.
+8195.0,5.3,lawn and garden,"shoveling snow, by hand, moderate effort",,2,General physical activity contributing to health and body needs.
+8200.0,6.0,lawn and garden,"shovelling snow, by hand (Taylor Code 610)",,2,General physical activity contributing to health and body needs.
+8202.0,7.5,lawn and garden,"shoveling snow, by hand, vigorous effort",,2,General physical activity contributing to health and body needs.
+8210.0,4.0,lawn and garden,"trimming shrubs or trees, manual cutter",,2,General physical activity contributing to health and body needs.
+8215.0,3.5,lawn and garden,"trimming shrubs or trees, power cutter, using leaf blower, edge, moderate effort",,"2,4",General physical activity contributing to health and body needs.
+8220.0,3.0,lawn and garden,"walking, applying fertilizer or seeding a lawn, push applicator",,5,General physical activity contributing to health and body needs.
+8230.0,1.5,lawn and garden,"watering lawn or garden, standing or walking",,"4,5",General physical activity contributing to health and body needs.
+8239.0,3.5,lawn and garden,"weeding, cultivating garden, light-to-moderate effort",,5,Supports basic physical functioning and body maintenance.
+8240.0,4.5,lawn and garden,"weeding, cultivating garden (Taylor Code 580)",,5,General physical activity contributing to health and body needs.
+8241.0,5.0,lawn and garden,"weeding, cultivating garden, using a hoe, moderate-to-vigorous effort",,"1,4,5",General physical activity contributing to health and body needs.
+8245.0,3.8,lawn and garden,"gardening, general, moderate effort",,"1,4,5",General physical activity contributing to health and body needs.
+8246.0,3.5,lawn and garden,"picking fruit off trees, picking fruits/vegetables, moderate effort",,1,General physical activity contributing to health and body needs.
+8248.0,4.5,lawn and garden,"picking fruit off trees, gleaning fruits, picking fruits/vegetables, climbing ladder to pick fruit, vigorous effort",,1,General physical activity contributing to health and body needs.
+8250.0,3.3,lawn and garden,"implied walking/standing - picking up yard, light, picking flowers or vegetables",,"1,4,5",Supports basic physical functioning and body maintenance.
+8251.0,3.0,lawn and garden,"walking, gathering gardening tools",,5,General physical activity contributing to health and body needs.
+8255.0,5.5,lawn and garden,"wheelbarrow, pushing garden cart or wheelbarrow",,5,General physical activity contributing to health and body needs.
+8260.0,3.0,lawn and garden,"yard work, general, light effort",,"4,5",Supports basic physical functioning and body maintenance.
+8261.0,4.0,lawn and garden,"yard work, general, moderate effort",,4,"Related to maintaining safety, stability, or health security."
+8262.0,6.0,lawn and garden,"yard work, general, vigorous effort",,1,"Related to maintaining safety, stability, or health security."
+9000.0,1.5,miscellaneous,"board game playing, sitting",,3,General physical activity contributing to health and body needs.
+9005.0,2.5,miscellaneous,"casino gambling, standing",,4,General physical activity contributing to health and body needs.
+9010.0,1.5,miscellaneous,"card playing, sitting",,4,General physical activity contributing to health and body needs.
+9013.0,1.5,miscellaneous,"chess game, sitting",,5,General physical activity contributing to health and body needs.
+9015.0,1.5,miscellaneous,"copying documents, standing",,1,General physical activity contributing to health and body needs.
+9020.0,1.8,miscellaneous,"drawing, writing, painting, standing",,5,General physical activity contributing to health and body needs.
+9025.0,1.0,miscellaneous,"laughing, sitting",,5,General physical activity contributing to health and body needs.
+9030.0,1.3,miscellaneous,"sitting, reading, book, newspaper, etc.",,5,General physical activity contributing to health and body needs.
+9040.0,1.3,miscellaneous,"sitting, writing, desk work, typing",,2,"Related to maintaining safety, stability, or health security."
+9045.0,1.0,miscellaneous,"sitting, playing traditional video game, computer game",,"4,5",General physical activity contributing to health and body needs.
+9050.0,1.8,miscellaneous,"standing, talking in person, on the phone, computer, or text messaging, light effort",,3,Supports basic physical functioning and body maintenance.
+9055.0,1.5,miscellaneous,"sitting, talking in person, on the phone, computer, or text messaging, light effort",,3,Supports basic physical functioning and body maintenance.
+9060.0,1.3,miscellaneous,"sitting, studying, general, including reading and/or writing, light effort",,5,Supports basic physical functioning and body maintenance.
+9065.0,1.8,miscellaneous,"sitting, in class, general, including note-taking or class discussion",,5,General physical activity contributing to health and body needs.
+9070.0,1.8,miscellaneous,"standing, reading",,5,General physical activity contributing to health and body needs.
+9071.0,2.5,miscellaneous,"standing, miscellaneous",,1,General physical activity contributing to health and body needs.
+9075.0,1.8,miscellaneous,"sitting, arts and crafts,  carving wood, weaving, spinning wool, light effort",,5,Supports basic physical functioning and body maintenance.
+9080.0,3.0,miscellaneous,"sitting, arts and crafts,  carving wood, weaving, spinning wool, moderate effort",,5,General physical activity contributing to health and body needs.
+9085.0,2.5,miscellaneous,"standing, arts and crafts, sand painting, carving, weaving, light effort",,"4,5",Supports basic physical functioning and body maintenance.
+9090.0,3.3,miscellaneous,"standing, arts and crafts, sand painting, carving, weaving, moderate effort",,"4,5",General physical activity contributing to health and body needs.
+9095.0,3.5,miscellaneous,"standing, arts and crafts, sand painting, carving, weaving, vigorous effort",,5,General physical activity contributing to health and body needs.
+9100.0,1.8,miscellaneous,"retreat/family reunion activities involving sitting, relaxing, talking, eating",,"1,3",Supports basic physical functioning and body maintenance.
+9101.0,3.0,miscellaneous,retreat/family reunion activities involving playing games with children,,3,Supports basic physical functioning and body maintenance.
+9105.0,2.0,miscellaneous,touring/traveling/vacation involving riding in a vehicle,,5,General physical activity contributing to health and body needs.
+9106.0,3.5,miscellaneous,touring/traveling/vacation involving walking,,5,General physical activity contributing to health and body needs.
+9110.0,2.5,miscellaneous,"camping involving standing, walking, sitting, light-to-moderate effort",,1,Supports basic physical functioning and body maintenance.
+9115.0,1.5,miscellaneous,"sitting at a sporting event, spectator",,"3,4",General physical activity contributing to health and body needs.
+10010.0,1.8,music playing,"accordion, sitting",,5,General physical activity contributing to health and body needs.
+10020.0,2.3,music playing,"cello, sitting",,"4,5",General physical activity contributing to health and body needs.
+10030.0,2.3,music playing,"conducting orchestra, standing",,5,General physical activity contributing to health and body needs.
+10035.0,2.5,music playing,"double bass, standing",,5,General physical activity contributing to health and body needs.
+10040.0,3.8,music playing,"drums, sitting",,5,General physical activity contributing to health and body needs.
+10045.0,3.0,music playing,"drumming (e.g., bongo, conga, benbe), moderate, sitting",,5,General physical activity contributing to health and body needs.
+10050.0,2.0,music playing,"flute, sitting",,5,General physical activity contributing to health and body needs.
+10060.0,1.8,music playing,"horn, standing",,5,General physical activity contributing to health and body needs.
+10070.0,2.3,music playing,"piano, sitting",,5,General physical activity contributing to health and body needs.
+10074.0,2.0,music playing,"playing musical instruments, general",,5,General physical activity contributing to health and body needs.
+10077.0,2.0,music playing,"organ, sitting",,5,General physical activity contributing to health and body needs.
+10080.0,3.5,music playing,"trombone, standing",,5,General physical activity contributing to health and body needs.
+10090.0,1.8,music playing,"trumpet, standing",,5,General physical activity contributing to health and body needs.
+10100.0,2.5,music playing,"violin, sitting",,5,General physical activity contributing to health and body needs.
+10110.0,1.8,music playing,"woodwind, sitting",,5,General physical activity contributing to health and body needs.
+10120.0,2.0,music playing,"guitar, classical, folk, sitting",,5,General physical activity contributing to health and body needs.
+10125.0,3.0,music playing,"guitar, rock and roll band, standing",,5,General physical activity contributing to health and body needs.
+10130.0,4.0,music playing,"marching band, baton twirling, walking, moderate pace, general",,5,General physical activity contributing to health and body needs.
+10131.0,5.5,music playing,"marching band, playing an instrument, walking, brisk pace, general",,"3,4,5",General physical activity contributing to health and body needs.
+10135.0,3.5,music playing,"marching band, drum major, walking",,5,General physical activity contributing to health and body needs.
+11003.0,2.3,occupation,"active workstation, treadmill desk, walking",,1,"Related to maintaining safety, stability, or health security."
+11006.0,3.0,occupation,airline flight attendant,,"1,2,3,4",Supports basic physical functioning and body maintenance.
+11010.0,4.0,occupation,"bakery, general, moderate effort",,1,General physical activity contributing to health and body needs.
+11015.0,2.0,occupation,"bakery, light effort",,1,Supports basic physical functioning and body maintenance.
+11020.0,2.3,occupation,bookbinding,,4,General physical activity contributing to health and body needs.
+11030.0,6.0,occupation,"building road, driving heavy machinery",,"1,2",General physical activity contributing to health and body needs.
+11035.0,2.0,occupation,"building road, directing traffic, standing",,"1,2,4",General physical activity contributing to health and body needs.
+11038.0,2.5,occupation,"carpentry, general, light effort",,4,Supports basic physical functioning and body maintenance.
+11040.0,4.3,occupation,"carpentry, general, moderate effort",,4,General physical activity contributing to health and body needs.
+11042.0,7.0,occupation,"carpentry, general, heavy or vigorous effort",,2,General physical activity contributing to health and body needs.
+11050.0,8.0,occupation,"carrying heavy loads (e.g., bricks, tools)",,1,General physical activity contributing to health and body needs.
+11060.0,8.0,occupation,"carrying moderate loads up stairs, moving boxes 25-49 lbs",,"1,2",General physical activity contributing to health and body needs.
+11070.0,4.0,occupation,"chambermaid, hotel housekeeper, making bed, cleaning bathroom, pushing cart",,"1,2",General physical activity contributing to health and body needs.
+11080.0,5.3,occupation,"coal mining, drilling coal, rock",,1,General physical activity contributing to health and body needs.
+11090.0,5.0,occupation,"coal mining, erecting supports",,2,General physical activity contributing to health and body needs.
+11100.0,5.5,occupation,"coal mining, general",,1,General physical activity contributing to health and body needs.
+11110.0,6.3,occupation,"coal mining, shoveling coal",,1,General physical activity contributing to health and body needs.
+11115.0,2.5,occupation,"cook, chef",,1,General physical activity contributing to health and body needs.
+11120.0,4.0,occupation,"construction, outside, remodeling, new structures (e.g., roof repair, miscellaneous)",,2,General physical activity contributing to health and body needs.
+11125.0,2.3,occupation,"custodial work, light effort (e.g., cleaning sink and toilet, dusting, vacuuming, light cleaning)",,"1,2",Supports basic physical functioning and body maintenance.
+11126.0,3.8,occupation,"custodial work, moderate effort (e.g., electric buffer, feathering arena floors, mopping, taking out trash, vacuuming)",,"1,2",Supports basic physical functioning and body maintenance.
+11130.0,3.3,occupation,"electrical work (e.g., hook up wire, tapping-splicing)",,2,"Related to maintaining safety, stability, or health security."
+11135.0,1.8,occupation,"engineer (e.g., mechanical or electrical)",,4,General physical activity contributing to health and body needs.
+11145.0,7.8,occupation,"farming, vigorous effort (e.g., baling hay, cleaning barn)",,1,General physical activity contributing to health and body needs.
+11146.0,4.8,occupation,"farming, moderate effort (e.g., feeding animals, chasing cattle by walking and/or horseback, spreading manure, harvesting crops)",,1,General physical activity contributing to health and body needs.
+11147.0,2.0,occupation,"farming, light effort (e.g., cleaning animal sheds, preparing animal feed)",,1,Supports basic physical functioning and body maintenance.
+11170.0,2.8,occupation,"farming, driving tasks (e.g., driving tractor or harvester)",,"1,2",General physical activity contributing to health and body needs.
+11180.0,3.5,occupation,"farming, feeding small animals",,"1,2",General physical activity contributing to health and body needs.
+11190.0,4.3,occupation,"farming, feeding cattle, horses",,"1,2,4",General physical activity contributing to health and body needs.
+11191.0,4.3,occupation,"farming, hauling water for animals, general hauling water,farming, general hauling water",,1,General physical activity contributing to health and body needs.
+11192.0,4.5,occupation,"farming, taking care of animals (e.g., grooming, brushing, shearing sheep, assisting with birthing, medical care, branding), general",,"1,2,4",General physical activity contributing to health and body needs.
+11195.0,3.8,occupation,"farming, rice, planting, grain milling activities",,1,General physical activity contributing to health and body needs.
+11210.0,3.5,occupation,"farming, milking by hand, cleaning pails, moderate effort",,2,General physical activity contributing to health and body needs.
+11220.0,1.3,occupation,"farming, milking by machine, light effort",,"1,2",Supports basic physical functioning and body maintenance.
+11240.0,8.0,occupation,"fire fighter, general",,"4,5",General physical activity contributing to health and body needs.
+11244.0,6.8,occupation,"fire fighter, rescue victim, automobile accident, using pike pole",,"2,3,4,5",General physical activity contributing to health and body needs.
+11245.0,8.0,occupation,"fire fighter, raising and climbing ladder with full gear, simulated fire supression",,"2,4",General physical activity contributing to health and body needs.
+11246.0,9.0,occupation,"fire fighter, hauling hoses on ground, carrying/hoisting equipment, breaking down walls etc., wearing full gear",,2,General physical activity contributing to health and body needs.
+11247.0,3.5,occupation,"fishing, commercial, light effort",,2,Supports basic physical functioning and body maintenance.
+11248.0,5.0,occupation,"fishing, commercial, moderate effort",,2,General physical activity contributing to health and body needs.
+11249.0,7.0,occupation,"fishing, commercial, vigorous effort",,1,General physical activity contributing to health and body needs.
+11250.0,17.5,occupation,"forestry, ax chopping, very fast, 1.25 kg axe, 51 blows/min, extremely vigorous effort",,1,Supports basic physical functioning and body maintenance.
+11260.0,5.0,occupation,"forestry, ax chopping, slow, 1.25 kg axe, 19 blows/min, moderate effort",,1,Supports basic physical functioning and body maintenance.
+11262.0,8.0,occupation,"forestry, ax chopping, fast, 1.25 kg axe, 35 blows/min, vigorous effort",,1,Supports basic physical functioning and body maintenance.
+11264.0,4.5,occupation,"forestry, moderate effort (e.g., sawing wood with power saw, weeding, hoeing)",,2,Supports basic physical functioning and body maintenance.
+11266.0,8.0,occupation,"forestry, vigorous effort (e.g., barking, felling, or trimming trees, carrying or stacking logs, planting seeds, sawing lumber by hand)",,"1,2,4",Supports basic physical functioning and body maintenance.
+11370.0,4.5,occupation,furriery,,2,General physical activity contributing to health and body needs.
+11375.0,4.0,occupation,"garbage collector, walking, dumping bins into truck",,"1,2",General physical activity contributing to health and body needs.
+11378.0,1.8,occupation,"hairstylist (e.g., plaiting hair, manicure, make-up artist)",,"4,5",General physical activity contributing to health and body needs.
+11380.0,7.3,occupation,"horse grooming, including feeding, cleaning stalls, bathing, brushing, clipping, longeing and exercising horses",,"1,2,3,4",General physical activity contributing to health and body needs.
+11381.0,4.3,occupation,"horse, feeding, watering, cleaning stalls, implied walking and lifting loads",,1,General physical activity contributing to health and body needs.
+11390.0,7.3,occupation,"horse racing, galloping",,"1,2,4","Involves achievement, recognition, or building self-esteem."
+11400.0,5.8,occupation,"horse racing, trotting",,4,"Involves achievement, recognition, or building self-esteem."
+11410.0,3.8,occupation,"horse racing, walking",,"1,2","Involves achievement, recognition, or building self-esteem."
+11413.0,3.0,occupation,kitchen maid,,"1,2",General physical activity contributing to health and body needs.
+11415.0,4.0,occupation,"lawn keeper, yard work, general",,"1,2","Related to maintaining safety, stability, or health security."
+11418.0,3.3,occupation,laundry worker,,"1,2","Related to maintaining safety, stability, or health security."
+11420.0,3.0,occupation,locksmith,,2,General physical activity contributing to health and body needs.
+11430.0,3.0,occupation,"machine tooling (e.g., machining, working sheet metal, machine fitter, operating lathe, welding) light-to-moderate effort",,"1,2,4",Supports basic physical functioning and body maintenance.
+11450.0,5.0,occupation,"Machine tooling, operating punch press, moderate effort",,1,General physical activity contributing to health and body needs.
+11472.0,1.8,occupation,"manager, property",,"1,2,4",General physical activity contributing to health and body needs.
+11475.0,2.8,occupation,"manual or unskilled labor, general, light effort",,"1,2",Supports basic physical functioning and body maintenance.
+11476.0,4.5,occupation,"manual or unskilled labor, general, moderate effort",,"1,2",General physical activity contributing to health and body needs.
+11477.0,6.5,occupation,"manual or unskilled labor, general, vigorous effort",,"1,2",General physical activity contributing to health and body needs.
+11480.0,4.3,occupation,"masonry, concrete, moderate effort",,2,General physical activity contributing to health and body needs.
+11482.0,2.5,occupation,"masonry, concrete, light effort",,1,Supports basic physical functioning and body maintenance.
+11485.0,4.0,occupation,"massage therapist, standing",,"1,2",General physical activity contributing to health and body needs.
+11490.0,7.5,occupation,"moving, carrying or pushing heavy objects, 75 lbs or more, only active time (e.g., desks, moving van work)",,1,"Related to maintaining safety, stability, or health security."
+11495.0,12.0,occupation,"skindiving or SCUBA diving as a frogman, Navy Seal",,"3,4,5",General physical activity contributing to health and body needs.
+11500.0,2.5,occupation,"operating heavy duty equipment, automated, not driving",,"1,2,3,4",General physical activity contributing to health and body needs.
+11510.0,4.5,occupation,"orange grove work, picking fruit",,"1,2","Related to maintaining safety, stability, or health security."
+11514.0,3.3,occupation,"painting,house, furniture, moderate effort",,4,General physical activity contributing to health and body needs.
+11516.0,3.0,occupation,plumbing activities,,2,General physical activity contributing to health and body needs.
+11520.0,2.0,occupation,"printing, paper industry worker, standing",,"1,2","Related to maintaining safety, stability, or health security."
+11525.0,2.5,occupation,"police, directing traffic, standing",,"1,2",General physical activity contributing to health and body needs.
+11526.0,2.5,occupation,"police, driving a squad car, sitting",,"2,4",General physical activity contributing to health and body needs.
+11527.0,1.3,occupation,"police, riding in a squad car, sitting",,"1,2,3,4",General physical activity contributing to health and body needs.
+11528.0,4.0,occupation,"police, making an arrest, standing",,"2,4",Supports basic physical functioning and body maintenance.
+11529.0,2.3,occupation,"postal carrier, walking to deliver mail",,"1,2,3",General physical activity contributing to health and body needs.
+11530.0,2.0,occupation,"shoe repair, general",,4,General physical activity contributing to health and body needs.
+11540.0,7.8,occupation,"shoveling, digging ditches",,"1,2",General physical activity contributing to health and body needs.
+11550.0,8.8,occupation,"shoveling, more than 16 lbs/minute, deep digging, vigorous effort",,1,General physical activity contributing to health and body needs.
+11560.0,5.0,occupation,"shoveling, less than 10 lbs/minute, moderate effort",,1,General physical activity contributing to health and body needs.
+11570.0,6.5,occupation,"shoveling, 10 to 15 lbs/minute, vigorous effort",,2,General physical activity contributing to health and body needs.
+11580.0,1.5,occupation,"sitting tasks, light effort (e.g., office work, chemistry lab work, computer work, light assembly repair, watch repair, reading, desk work)",,"1,2",Supports basic physical functioning and body maintenance.
+11585.0,1.5,occupation,"sitting meetings, light effort, general, and/or with talking involved (e.g., eating at a business meeting)",,4,Supports basic physical functioning and body maintenance.
+11590.0,2.5,occupation,"sitting tasks, moderate effort (e.g., pushing heavy levers, riding mower/forklift, crane operation)",,2,General physical activity contributing to health and body needs.
+11593.0,2.8,occupation,"sitting, teaching stretching or yoga, or light effort exercise class",,5,Supports basic physical functioning and body maintenance.
+11600.0,3.0,occupation,"standing tasks, light effort (e.g., bartending, store clerk, assembling, filing, duplicating, librarian, putting up a Christmas tree, standing and talking at work,",,"1,2,3,4",Supports basic physical functioning and body maintenance.
+,,,"changing clothes when teaching physical education, standing)",,2,General physical activity contributing to health and body needs.
+11610.0,3.0,occupation,"standing, light/moderate effort (e.g., assemble/repair heavy parts, welding,stocking parts,auto repair,standing, packing boxes, nursing patient care)",,1,Supports basic physical functioning and body maintenance.
+11615.0,4.5,occupation,"standing, moderate effort, lifting items continuously, 10 – 20 lbs, with limited walking or resting",,1,Supports basic physical functioning and body maintenance.
+11620.0,3.5,occupation,"standing, moderate effort, intermittent lifting 50 lbs, hitch/twisting ropes",,2,General physical activity contributing to health and body needs.
+11630.0,4.5,occupation,"standing, moderate/heavy tasks (e.g., lifting more than 50 lbs, masonry, painting, paper hanging)",,2,General physical activity contributing to health and body needs.
+11708.0,5.3,occupation,"steel mill, moderate effort (e.g., fettling, forging, tipping molds)",,1,General physical activity contributing to health and body needs.
+11710.0,8.3,occupation,"steel mill, vigorous effort (e.g., hand rolling, merchant mill rolling, removing slag, tending furnace)",,"2,4",General physical activity contributing to health and body needs.
+11720.0,2.3,occupation,"tailoring, cutting fabric",,2,General physical activity contributing to health and body needs.
+11730.0,2.5,occupation,"tailoring, general",,"1,2",General physical activity contributing to health and body needs.
+11740.0,1.8,occupation,"tailoring, hand sewing",,4,General physical activity contributing to health and body needs.
+11750.0,2.5,occupation,"tailoring, machine sewing",,"1,2",General physical activity contributing to health and body needs.
+11760.0,3.5,occupation,"tailoring, pressing",,2,General physical activity contributing to health and body needs.
+11763.0,2.0,occupation,"tailoring, weaving, light effort (e.g., finishing operations, washing, dyeing, inspecting cloth, counting yards, paperwork)",,4,Supports basic physical functioning and body maintenance.
+11765.0,4.0,occupation,"tailoring, weaving, moderate effort (e.g., spinning and weaving operations, delivering boxes of yam to spinners, loading of warp bean, pinwinding,",,"1,2",General physical activity contributing to health and body needs.
+,,,"conewinding, warping, cloth cutting)",,2,General physical activity contributing to health and body needs.
+11766.0,6.5,occupation,"truck driving, loading and unloading truck, tying down load, standing, walking and carrying heavy loads",,"1,2",General physical activity contributing to health and body needs.
+11767.0,2.0,occupation,"Truch, driving delivery truck, taxi, shuttlebus, school bus",,"2,4",General physical activity contributing to health and body needs.
+11770.0,1.3,occupation,"typing, electric, manual or computer",,"1,2",General physical activity contributing to health and body needs.
+11780.0,6.3,occupation,"using heavy power tools such as pneumatic tools (e.g., jackhammers, drills)",,4,General physical activity contributing to health and body needs.
+11790.0,8.0,occupation,"using heavy tools (not power) such as shovel, pick, tunnel bar, spade",,4,General physical activity contributing to health and body needs.
+11791.0,2.0,occupation,"walking on job, less than 2.0 mph, very slow speed, in office or lab area",,2,Supports basic physical functioning and body maintenance.
+11792.0,3.5,occupation,"walking on job, 3.0 mph, in office, moderate speed, not carrying anything",,2,General physical activity contributing to health and body needs.
+11793.0,4.3,occupation,"walking on job, 3.5 mph, in office, brisk speed, not carrying anything",,2,General physical activity contributing to health and body needs.
+11795.0,3.5,occupation,"walking on job, 2.5 mph, slow speed and carrying light objects less than 25 lbs",,"1,2",Supports basic physical functioning and body maintenance.
+11796.0,3.0,occupation,"walking, gathering things at work, ready to leave",,"1,2","Related to maintaining safety, stability, or health security."
+11797.0,3.8,occupation,"walking, 2.5 mph, slow speed, carrying heavy objects more than 25 lbs",,4,Supports basic physical functioning and body maintenance.
+11800.0,4.5,occupation,"walking, 3.0 mph, moderately and carrying light objects less than 25 lbs",,2,Supports basic physical functioning and body maintenance.
+11805.0,3.5,occupation,"walking, pushing a wheelchair",,1,General physical activity contributing to health and body needs.
+11810.0,4.8,occupation,"walking, 3.5 mph, briskly and carrying objects less than 25 lbs",,2,General physical activity contributing to health and body needs.
+11820.0,5.0,occupation,"walking or walk downstairs or standing, carrying objects about 25 to 49 lbs",,"1,2",General physical activity contributing to health and body needs.
+11830.0,6.5,occupation,"walking or walk downstairs or standing, carrying objects about 50 to 74 lbs",,2,General physical activity contributing to health and body needs.
+11840.0,7.5,occupation,"walking or walk downstairs or standing, carrying objects about 75 to 99 lbs",,"1,2,3,4,5",General physical activity contributing to health and body needs.
+11850.0,8.5,occupation,"walking or walk downstairs or standing, carrying objects about 100 lbs or more",,1,General physical activity contributing to health and body needs.
+11870.0,3.0,occupation,"working in scene shop, theater actor, backstage employee",,"1,4",Supports basic physical functioning and body maintenance.
+12010.0,6.0,running,jog/walk combination (jogging component of less than 10 minutes) (Taylor Code 180),,1,General physical activity contributing to health and body needs.
+12020.0,7.0,running,"jogging, general",,1,General physical activity contributing to health and body needs.
+12025.0,8.0,running,"jogging, in place",,1,General physical activity contributing to health and body needs.
+12027.0,4.5,running,"jogging, on a mini-tramp",,"1,4",General physical activity contributing to health and body needs.
+12029.0,6.0,running,"Running, 4 mph (13 min/mile)",,1,General physical activity contributing to health and body needs.
+12030.0,8.3,running,"running, 5 mph (12 min/mile)",,1,General physical activity contributing to health and body needs.
+12040.0,9.0,running,"running, 5.2 mph (11.5 min/mile)",,"1,4",General physical activity contributing to health and body needs.
+12050.0,9.8,running,"running, 6 mph (10 min/mile)",,"1,4",General physical activity contributing to health and body needs.
+12060.0,10.5,running,"running, 6.7 mph (9 min/mile)",,4,General physical activity contributing to health and body needs.
+12070.0,11.0,running,"running, 7 mph (8.5 min/mile)",,1,General physical activity contributing to health and body needs.
+12080.0,11.5,running,"running, 7.5 mph (8 min/mile)",,"1,4",General physical activity contributing to health and body needs.
+12090.0,11.8,running,"running, 8 mph (7.5 min/mile)",,1,General physical activity contributing to health and body needs.
+12100.0,12.3,running,"running, 8.6 mph (7 min/mile)",,1,General physical activity contributing to health and body needs.
+12110.0,12.8,running,"running, 9 mph (6.5 min/mile)",,"1,4",General physical activity contributing to health and body needs.
+12120.0,14.5,running,"running, 10 mph (6 min/mile)",,1,General physical activity contributing to health and body needs.
+12130.0,16.0,running,"running, 11 mph (5.5 min/mile)",,"1,4",General physical activity contributing to health and body needs.
+12132.0,19.0,running,"running, 12 mph (5 min/mile)",,4,General physical activity contributing to health and body needs.
+12134.0,19.8,running,"running, 13 mph (4.6 min/mile)",,"1,3,4",General physical activity contributing to health and body needs.
+12135.0,23.0,running,"running, 14 mph (4.3 min/mile)",,1,General physical activity contributing to health and body needs.
+12140.0,9.0,running,"running, cross country",,1,General physical activity contributing to health and body needs.
+12150.0,8.0,running,"running, (Taylor code 200)",,"1,3,4",General physical activity contributing to health and body needs.
+12170.0,15.0,running,"running, stairs, up",,1,General physical activity contributing to health and body needs.
+12180.0,10.0,running,"running, on a track, team practice",,"4,5",Involves social connection or group belonging.
+12190.0,8.0,running,"running, training, pushing a wheelchair or baby carrier",,1,"Related to maintaining safety, stability, or health security."
+12200.0,13.3,running,"running, marathon",,1,General physical activity contributing to health and body needs.
+13000.0,2.3,self care,"getting ready for bed, general, standing",,1,General physical activity contributing to health and body needs.
+13009.0,1.8,self care,"sitting on toilet, eliminating while standing or squating",,1,General physical activity contributing to health and body needs.
+13010.0,1.5,self care,"bathing, sitting",,1,General physical activity contributing to health and body needs.
+13020.0,2.5,self care,"dressing, undressing, standing or sitting",,1,General physical activity contributing to health and body needs.
+13030.0,1.5,self care,"eating, sitting",,"1,2",Supports basic physical functioning and body maintenance.
+13035.0,2.0,self care,"talking and eating or eating only, standing",,1,Supports basic physical functioning and body maintenance.
+13036.0,1.5,self care,"taking medication, sitting or standing",,1,General physical activity contributing to health and body needs.
+13040.0,2.0,self care,"grooming, washing hands, shaving, brushing teeth, putting on make-up, sitting or standing",,"1,4",General physical activity contributing to health and body needs.
+13045.0,2.5,self care,"hairstyling, standing",,1,General physical activity contributing to health and body needs.
+13046.0,1.3,self care,"having hair or nails done by someone else, sitting",,1,General physical activity contributing to health and body needs.
+13050.0,2.0,self care,"showering, toweling off, standing",,1,General physical activity contributing to health and body needs.
+14010.0,2.8,sexual activity,"active, vigorous effort",,1,General physical activity contributing to health and body needs.
+14020.0,1.8,sexual activity,"general, moderate effort",,4,General physical activity contributing to health and body needs.
+14030.0,1.3,sexual activity,"passive, light effort, kissing, hugging",,"4,5",Supports basic physical functioning and body maintenance.
+15000.0,5.5,sports,"Alaska Native Games, Eskimo Olympics, general",,4,General physical activity contributing to health and body needs.
+15010.0,4.3,sports,"archery, non-hunting",,"3,4",General physical activity contributing to health and body needs.
+15020.0,7.0,sports,"badminton, competitive (Taylor Code 450)",,"3,4,5","Involves achievement, recognition, or building self-esteem."
+15030.0,5.5,sports,"badminton, social singles and doubles, general",,"3,4,5",Involves social connection or group belonging.
+15040.0,8.0,sports,"basketball, game (Taylor Code 490)",,"3,4",General physical activity contributing to health and body needs.
+15050.0,6.0,sports,"basketball, non-game, general (Taylor Code 480)",,4,General physical activity contributing to health and body needs.
+15055.0,6.5,sports,"basketball, general",,"3,4,5",General physical activity contributing to health and body needs.
+15060.0,7.0,sports,"basketball, officiating (Taylor Code 500)",,"3,4,5",General physical activity contributing to health and body needs.
+15070.0,4.5,sports,"basketball, shooting baskets",,"3,4,5",General physical activity contributing to health and body needs.
+15072.0,9.3,sports,"basketball, drills, practice",,4,General physical activity contributing to health and body needs.
+15075.0,7.8,sports,"basketball, wheelchair",,"3,4",General physical activity contributing to health and body needs.
+15080.0,2.5,sports,billiards,,4,General physical activity contributing to health and body needs.
+15090.0,3.0,sports,bowling (Taylor Code 390),,"3,4",General physical activity contributing to health and body needs.
+15092.0,3.8,sports,"bowling, indoor, bowling alley",,4,General physical activity contributing to health and body needs.
+15100.0,12.8,sports,"boxing, in ring, general",,4,General physical activity contributing to health and body needs.
+15110.0,5.5,sports,"boxing, punching bag",,4,General physical activity contributing to health and body needs.
+15120.0,7.8,sports,"boxing, sparring",,"3,4",General physical activity contributing to health and body needs.
+15130.0,7.0,sports,broomball,,"3,4,5",General physical activity contributing to health and body needs.
+15135.0,5.8,sports,"children’s games, adults playing (e.g., hopscotch, 4-square, dodgeball, playground apparatus, t-ball, tetherball, marbles, arcade games), moderate effort",,"3,4,5",General physical activity contributing to health and body needs.
+15138.0,6.0,sports,"cheerleading, gymnastic moves, competitive",,"3,4,5","Involves achievement, recognition, or building self-esteem."
+15140.0,4.0,sports,"coaching, football, soccer, basketball, baseball, swimming, etc.",,"3,4,5",General physical activity contributing to health and body needs.
+15142.0,8.0,sports,"coaching, actively playing sport with players",,"3,4,5",General physical activity contributing to health and body needs.
+15150.0,4.8,sports,"cricket, batting, bowling, fielding",,"3,4,5",General physical activity contributing to health and body needs.
+15160.0,3.3,sports,croquet,,4,General physical activity contributing to health and body needs.
+15170.0,4.0,sports,curling,,"3,4,5",General physical activity contributing to health and body needs.
+15180.0,2.5,sports,"darts, wall or lawn",,"3,4",General physical activity contributing to health and body needs.
+15190.0,6.0,sports,"drag racing, pushing or driving a car",,4,"Involves achievement, recognition, or building self-esteem."
+15192.0,8.5,sports,"auto racing, open wheel",,"3,4,5","Involves achievement, recognition, or building self-esteem."
+15200.0,6.0,sports,fencing,,4,General physical activity contributing to health and body needs.
+15210.0,8.0,sports,"football, competitive",,4,"Involves achievement, recognition, or building self-esteem."
+15230.0,8.0,sports,"football, touch, flag, general (Taylor Code 510)",,"3,4,5",General physical activity contributing to health and body needs.
+15232.0,4.0,sports,"football, touch, flag, light effort",,3,Supports basic physical functioning and body maintenance.
+15235.0,2.5,sports,"football or baseball, playing catch",,"3,4",General physical activity contributing to health and body needs.
+15240.0,3.0,sports,"frisbee playing, general",,"3,4",General physical activity contributing to health and body needs.
+15250.0,8.0,sports,"frisbee, ultimate",,"1,3,4",General physical activity contributing to health and body needs.
+15255.0,4.8,sports,"golf, general",,"3,4,5",General physical activity contributing to health and body needs.
+15265.0,4.3,sports,"golf, walking, carrying clubs",,4,Involves social connection or group belonging.
+15270.0,3.0,sports,"golf, miniature, driving range",,"3,4",General physical activity contributing to health and body needs.
+15285.0,5.3,sports,"golf, walking, pulling clubs",,"4,5",Involves social connection or group belonging.
+15290.0,3.5,sports,"golf, using power cart (Taylor Code 070)",,5,General physical activity contributing to health and body needs.
+15300.0,3.8,sports,"gymnastics, general",,"4,5",General physical activity contributing to health and body needs.
+15310.0,4.0,sports,hacky sack,,"3,4",General physical activity contributing to health and body needs.
+15320.0,12.0,sports,"handball, general (Taylor Code 520)",,4,General physical activity contributing to health and body needs.
+15330.0,8.0,sports,"handball, team",,"3,4,5",Involves social connection or group belonging.
+15335.0,4.0,sports,"high ropes course, multiple elements",,"3,4,5",General physical activity contributing to health and body needs.
+15340.0,3.5,sports,hang gliding,,5,General physical activity contributing to health and body needs.
+15350.0,7.8,sports,"hockey, field",,"3,4",General physical activity contributing to health and body needs.
+15360.0,8.0,sports,"hockey, ice, general",,"3,4",General physical activity contributing to health and body needs.
+15362.0,10.0,sports,"hockey, ice, competitive",,"3,4,5","Involves achievement, recognition, or building self-esteem."
+15370.0,5.5,sports,"horseback riding, general",,4,General physical activity contributing to health and body needs.
+15375.0,4.3,sports,"horse chores, feeding, watering, cleaning stalls, implied walking and lifting loads",,4,General physical activity contributing to health and body needs.
+15380.0,4.5,sports,"saddling, cleaning, grooming, harnessing and unharnessing horse",,4,General physical activity contributing to health and body needs.
+15390.0,5.8,sports,"horseback riding, trotting",,5,General physical activity contributing to health and body needs.
+15395.0,7.3,sports,"horseback riding, canter or gallop",,4,General physical activity contributing to health and body needs.
+15400.0,3.8,sports,"horseback riding,walking",,"4,5",General physical activity contributing to health and body needs.
+15402.0,9.0,sports,"horseback riding, jumping",,4,General physical activity contributing to health and body needs.
+15408.0,1.8,sports,"horse cart, driving, standing or sitting",,5,General physical activity contributing to health and body needs.
+15410.0,3.0,sports,"horseshoe pitching, quoits",,3,General physical activity contributing to health and body needs.
+15420.0,12.0,sports,jai alai,,"3,4",General physical activity contributing to health and body needs.
+15425.0,5.3,sports,"martial arts, different types, slower pace, novice performers, practice",,"2,3,4",Supports basic physical functioning and body maintenance.
+15430.0,10.3,sports,"martial arts, different types, moderate pace (e.g., judo, jujitsu, karate, kick boxing, tae kwan do, tai-bo, Muay Thai boxing)",,"1,2,3,4",General physical activity contributing to health and body needs.
+15440.0,4.0,sports,juggling,,4,General physical activity contributing to health and body needs.
+15450.0,7.0,sports,kickball,,"3,4",General physical activity contributing to health and body needs.
+15460.0,8.0,sports,lacrosse,,"3,4,5",General physical activity contributing to health and body needs.
+15465.0,3.3,sports,"lawn bowling, bocce ball, outdoor",,"3,4",General physical activity contributing to health and body needs.
+15470.0,4.0,sports,"moto-cross, off-road motor sports, all-terrain vehicle, general",,"3,4,5",General physical activity contributing to health and body needs.
+15480.0,9.0,sports,orienteering,,4,General physical activity contributing to health and body needs.
+15490.0,10.0,sports,"paddleball, competitive",,"3,4","Involves achievement, recognition, or building self-esteem."
+15500.0,6.0,sports,"paddleball, casual, general (Taylor Code 460)",,"3,5",General physical activity contributing to health and body needs.
+15510.0,8.0,sports,"polo, on horseback",,"3,4,5",General physical activity contributing to health and body needs.
+15520.0,10.0,sports,"racquetball, competitive",,"3,4,5","Involves achievement, recognition, or building self-esteem."
+15530.0,7.0,sports,"racquetball, general (Taylor Code 470)",,5,General physical activity contributing to health and body needs.
+15533.0,8.0,sports,rock or mountain climbing (Taylor Code 470) (Formerly code = 17120),,5,"Represents self-expression, challenge, or personal fulfillment."
+15535.0,7.5,sports,"rock climbing, ascending rock, high difficulty",,"4,5",General physical activity contributing to health and body needs.
+15537.0,5.8,sports,"rock climbing, ascending or traversing rock, low-to-moderate difficulty",,4,General physical activity contributing to health and body needs.
+15540.0,5.0,sports,"rock climbing, rappelling",,"3,4,5",General physical activity contributing to health and body needs.
+15542.0,4.0,sports,"rodeo sports, general, light effort",,4,Supports basic physical functioning and body maintenance.
+15544.0,5.5,sports,"rodeo sports, general, moderate effort",,4,General physical activity contributing to health and body needs.
+15546.0,7.0,sports,"rodeo sports, general, vigorous effort",,"3,4",General physical activity contributing to health and body needs.
+15550.0,12.3,sports,"rope jumping, fast pace, 120-160 skips/min",,4,General physical activity contributing to health and body needs.
+15551.0,11.8,sports,"rope jumping, moderate pace, 100-120 skips/min, general,  2 foot skip, plain bounce",,1,General physical activity contributing to health and body needs.
+15552.0,8.8,sports,"rope jumping, slow pace, < 100 skips/min, 2 foot skip, rhythm bounce",,"1,4,5",Supports basic physical functioning and body maintenance.
+15560.0,8.3,sports,"rugby, union, team, competitive",,"3,4",Involves social connection or group belonging.
+15562.0,6.3,sports,"rugby, touch, non-competitive",,"3,5","Involves achievement, recognition, or building self-esteem."
+15570.0,3.0,sports,shuffleboard,,4,General physical activity contributing to health and body needs.
+15580.0,5.0,sports,"skateboarding, general, moderate effort",,"3,4,5",General physical activity contributing to health and body needs.
+15582.0,6.0,sports,"skateboarding, competitive, vigorous effort",,4,"Involves achievement, recognition, or building self-esteem."
+15590.0,7.0,sports,"skating, roller (Taylor Code 360)",,"3,4,5",General physical activity contributing to health and body needs.
+15591.0,7.5,sports,"rollerblading, in-line skating, 14.4 km/h (9.0 mph), recreational pace",,5,Supports basic physical functioning and body maintenance.
+15592.0,9.8,sports,"rollerblading, in-line skating, 17.7 km/h (11.0 mph), moderate pace, exercise training",,"1,4","Related to maintaining safety, stability, or health security."
+15593.0,12.3,sports,"rollerblading, in-line skating, 21.0 to 21.7 km/h (13.0 to 13.6 mph), fast pace, exercise training",,4,"Related to maintaining safety, stability, or health security."
+15594.0,14.0,sports,"rollerblading, in-line skating, 24.0 km/h (15.0 mph), maximal effort",,4,General physical activity contributing to health and body needs.
+15600.0,3.5,sports,"skydiving, base jumping, bungee jumping",,"4,5",General physical activity contributing to health and body needs.
+15605.0,10.0,sports,"soccer, competitive",,"3,4,5","Involves achievement, recognition, or building self-esteem."
+15610.0,7.0,sports,"soccer, casual, general (Taylor Code 540)",,3,General physical activity contributing to health and body needs.
+15620.0,5.0,sports,"softball or baseball, fast or slow pitch, general (Taylor Code 440)",,"3,4",Supports basic physical functioning and body maintenance.
+15625.0,4.0,sports,"softball, practice",,4,General physical activity contributing to health and body needs.
+15630.0,4.0,sports,"softball, officiating",,"3,4,5",General physical activity contributing to health and body needs.
+15640.0,6.0,sports,"softball,pitching",,"3,4,5",General physical activity contributing to health and body needs.
+15645.0,3.3,sports,"sports spectator, very excited, emotional, physically moving",,"3,4",General physical activity contributing to health and body needs.
+15650.0,12.0,sports,squash (Taylor Code 530),,5,General physical activity contributing to health and body needs.
+15652.0,7.3,sports,"squash, general",,"1,3,4",General physical activity contributing to health and body needs.
+15660.0,4.0,sports,"table tennis, ping pong (Taylor Code 410)",,"3,4,5",General physical activity contributing to health and body needs.
+15670.0,3.0,sports,"tai chi, qi gong, general",,"1,3,4,5",General physical activity contributing to health and body needs.
+15672.0,1.5,sports,"tai chi, qi gong, sitting, light effort",,5,Supports basic physical functioning and body maintenance.
+15675.0,7.3,sports,"tennis, general",,4,General physical activity contributing to health and body needs.
+15680.0,6.0,sports,"tennis, doubles (Taylor Code 430)",,"3,4,5",General physical activity contributing to health and body needs.
+15685.0,4.5,sports,"tennis, doubles",,"3,4",General physical activity contributing to health and body needs.
+15690.0,8.0,sports,"tennis, singles (Taylor Code 420)",,4,General physical activity contributing to health and body needs.
+15695.0,5.0,sports,"tennis, hitting balls, non-game play, moderate effort",,"1,3,4,5",General physical activity contributing to health and body needs.
+15700.0,3.5,sports,"trampoline, recreational",,5,Supports basic physical functioning and body maintenance.
+15702.0,4.5,sports,"trampoline, competitive",,"4,5","Involves achievement, recognition, or building self-esteem."
+15710.0,4.0,sports,volleyball (Taylor Code 400),,4,General physical activity contributing to health and body needs.
+15711.0,6.0,sports,"volleyball, competitive, in gymnasium",,"3,4,5","Involves achievement, recognition, or building self-esteem."
+15720.0,3.0,sports,"volleyball, non-competitive, 6 - 9 member team, general",,"3,4",Involves social connection or group belonging.
+15725.0,8.0,sports,"volleyball, beach, in sand",,"3,4",General physical activity contributing to health and body needs.
+15730.0,6.0,sports,wrestling (one match = 5 minutes),,4,Supports basic physical functioning and body maintenance.
+15731.0,7.0,sports,"wallyball, general",,"3,4",General physical activity contributing to health and body needs.
+15732.0,4.0,sports,"track and field (e.g., shot, discus, hammer throw)",,4,General physical activity contributing to health and body needs.
+15733.0,6.0,sports,"track and field (e.g., high jump, long jump, triple jump, javelin, pole vault)",,5,General physical activity contributing to health and body needs.
+15734.0,10.0,sports,"track and field (e.g., steeplechase, hurdles)",,"3,4,5",General physical activity contributing to health and body needs.
+16010.0,2.5,transportation,automobile or light truck (not a semi) driving,,2,Supports basic physical functioning and body maintenance.
+16015.0,1.3,transportation,riding in a car or truck,,2,General physical activity contributing to health and body needs.
+16016.0,1.3,transportation,riding in a bus or train,,2,General physical activity contributing to health and body needs.
+16020.0,1.8,transportation,flying airplane or helicopter,,2,General physical activity contributing to health and body needs.
+16030.0,3.5,transportation,"motor scooter, motorcycle",,2,General physical activity contributing to health and body needs.
+16035.0,6.3,transportation,pulling rickshaw,,1,General physical activity contributing to health and body needs.
+16040.0,6.0,transportation,pushing plane in and out of hangar,,2,General physical activity contributing to health and body needs.
+16050.0,2.5,transportation,"truck, semi, tractor, > 1 ton, or bus, driving",,2,General physical activity contributing to health and body needs.
+16060.0,3.5,transportation,"walking for transportation, 2.8-3.2 mph, level, moderate pace, firm surface",,2,"Related to maintaining safety, stability, or health security."
+17010.0,7.0,walking,backpacking (Taylor Code 050),,5,General physical activity contributing to health and body needs.
+17012.0,7.8,walking,"backpacking, hiking or organized walking with a daypack",,"1,3,4",General physical activity contributing to health and body needs.
+17020.0,5.0,walking,"carrying 15 pound load (e.g. suitcase), level ground or downstairs",,1,General physical activity contributing to health and body needs.
+17021.0,2.3,walking,"carrying 15 lb child, slow walking",,"1,3",Supports basic physical functioning and body maintenance.
+17025.0,8.3,walking,"carrying load upstairs, general",,1,General physical activity contributing to health and body needs.
+17026.0,5.0,walking,"carrying 1 to 15 lb load, upstairs",,1,General physical activity contributing to health and body needs.
+17027.0,6.0,walking,"carrying 16 to 24 lb load, upstairs",,1,General physical activity contributing to health and body needs.
+17028.0,8.0,walking,"carrying 25 to 49 lb load, upstairs",,1,General physical activity contributing to health and body needs.
+17029.0,10.0,walking,"carrying 50 to 74 lb load, upstairs",,1,General physical activity contributing to health and body needs.
+17030.0,12.0,walking,"carrying > 74 lb load, upstairs",,1,General physical activity contributing to health and body needs.
+17031.0,3.5,walking,"loading /unloading a car, implied walking",,1,General physical activity contributing to health and body needs.
+17033.0,6.3,walking,"climbing hills, no load",,5,General physical activity contributing to health and body needs.
+17035.0,6.5,walking,climbing hills with 0 to 9 lb load,,1,General physical activity contributing to health and body needs.
+17040.0,7.3,walking,climbing hills with 10 to 20 lb load,,1,General physical activity contributing to health and body needs.
+17050.0,8.3,walking,climbing hills with 21 to 42 lb load,,1,General physical activity contributing to health and body needs.
+17060.0,9.0,walking,climbing hills with 42+ lb load,,4,General physical activity contributing to health and body needs.
+17070.0,3.5,walking,descending stairs,,1,General physical activity contributing to health and body needs.
+17080.0,6.0,walking,"hiking, cross country (Taylor Code 040)",,5,General physical activity contributing to health and body needs.
+17082.0,5.3,walking,hiking or walking at a normal pace through fields and hillsides,,"1,5",General physical activity contributing to health and body needs.
+17085.0,2.5,walking,"bird watching, slow walk",,5,Supports basic physical functioning and body maintenance.
+17088.0,4.5,walking,"marching, moderate speed, military, no pack",,1,General physical activity contributing to health and body needs.
+17090.0,8.0,walking,"marching rapidly, military, no pack",,2,General physical activity contributing to health and body needs.
+17100.0,4.0,walking,"pushing or pulling stroller with child or walking with children, 2.5 to 3.1 mph",,3,General physical activity contributing to health and body needs.
+17105.0,3.8,walking,"pushing a wheelchair, non-occupational",,1,General physical activity contributing to health and body needs.
+17110.0,6.5,walking,race walking,,"1,4","Involves achievement, recognition, or building self-esteem."
+17130.0,8.0,walking,"stair climbing, using or climbing up ladder (Taylor Code 030)",,1,General physical activity contributing to health and body needs.
+17133.0,4.0,walking,"stair climbing, slow pace",,1,Supports basic physical functioning and body maintenance.
+17134.0,8.8,walking,"stair climbing, fast pace",,1,General physical activity contributing to health and body needs.
+17140.0,5.0,walking,using crutches,,1,General physical activity contributing to health and body needs.
+17150.0,2.0,walking,"walking, household",,"1,2",General physical activity contributing to health and body needs.
+17151.0,2.0,walking,"walking, less than 2.0 mph, level, strolling, very slow",,5,Supports basic physical functioning and body maintenance.
+17152.0,2.8,walking,"walking, 2.0 mph, level, slow pace, firm surface",,1,Supports basic physical functioning and body maintenance.
+17160.0,3.5,walking,walking for pleasure (Taylor Code 010),,5,General physical activity contributing to health and body needs.
+17161.0,2.5,walking,"walking from house to car or bus, from car or bus to go places, from car or bus to and from the worksite",,2,"Related to maintaining safety, stability, or health security."
+17162.0,2.5,walking,walking to neighbor’s house or family’s house for social reasons,,"1,3",Involves social connection or group belonging.
+17165.0,3.0,walking,walking the dog,,"1,3",General physical activity contributing to health and body needs.
+17170.0,3.0,walking,"walking, 2.5 mph, level, firm surface",,1,General physical activity contributing to health and body needs.
+17180.0,3.3,walking,"walking, 2.5 mph, downhill",,1,General physical activity contributing to health and body needs.
+17190.0,3.5,walking,"walking, 2.8 to 3.2 mph, level, moderate pace, firm surface",,1,General physical activity contributing to health and body needs.
+17200.0,4.3,walking,"walking, 3.5 mph, level, brisk, firm surface, walking for exercise",,1,General physical activity contributing to health and body needs.
+17210.0,5.3,walking,"walking, 2.9 to 3.5 mph, uphill, 1 to 5% grade",,1,General physical activity contributing to health and body needs.
+17211.0,8.0,walking,"walking, 2.9 to 3.5 mph, uphill, 6% to 15% grade",,1,General physical activity contributing to health and body needs.
+17220.0,5.0,walking,"walking, 4.0 mph, level, firm surface, very brisk pace",,1,General physical activity contributing to health and body needs.
+17230.0,7.0,walking,"walking, 4.5 mph, level, firm surface, very, very brisk",,1,General physical activity contributing to health and body needs.
+17231.0,8.3,walking,"walking, 5.0 mph, level, firm surface",,1,General physical activity contributing to health and body needs.
+17235.0,9.8,walking,"walking, 5.0 mph, uphill, 3% grade",,1,General physical activity contributing to health and body needs.
+17250.0,3.5,walking,"walking, for pleasure, work break",,"1,5","Related to maintaining safety, stability, or health security."
+17260.0,4.8,walking,"walking, grass track",,1,General physical activity contributing to health and body needs.
+17262.0,4.5,walking,"walking, normal pace, plowed field or sand",,1,General physical activity contributing to health and body needs.
+17270.0,4.0,walking,"walking, to work or class (Taylor Code 015)",,"1,2,4","Related to maintaining safety, stability, or health security."
+17280.0,2.5,walking,"walking, to and from an outhouse",,1,General physical activity contributing to health and body needs.
+17302.0,4.8,walking,"walking, for exercise, 3.5 to 4 mph, with ski poles, Nordic walking, level, moderate pace",,2,General physical activity contributing to health and body needs.
+17305.0,9.5,walking,"walking, for exercise, 5.0 mph, with ski poles, Nordic walking, level, fast pace",,"1,4",General physical activity contributing to health and body needs.
+17310.0,6.8,walking,"walking, for exercise, with ski poles, Nordic walking, uphill",,1,General physical activity contributing to health and body needs.
+17320.0,6.0,walking,"walking, backwards, 3.5 mph, level",,1,General physical activity contributing to health and body needs.
+17325.0,8.0,walking,"walking, backwards, 3.5 mph, uphill, 5% grade",,1,General physical activity contributing to health and body needs.
+18010.0,2.5,water activities,"boating, power, driving",1.0,"3,4,5",General physical activity contributing to health and body needs.
+18012.0,1.3,water activities,"boating, power, passenger, light",1.0,"3,4,5",Supports basic physical functioning and body maintenance.
+18020.0,4.0,water activities,"canoeing, on camping trip (Taylor Code 270)",1.0,5,General physical activity contributing to health and body needs.
+18025.0,3.3,water activities,"canoeing, harvesting wild rice, knocking rice off the stalks",1.0,"1,5",General physical activity contributing to health and body needs.
+18030.0,7.0,water activities,"canoeing, portaging",1.0,"3,4,5",General physical activity contributing to health and body needs.
+18040.0,2.8,water activities,"canoeing, rowing, 2.0-3.9 mph, light effort",1.0,5,Supports basic physical functioning and body maintenance.
+18050.0,5.8,water activities,"canoeing, rowing, 4.0-5.9 mph, moderate effort",1.0,"4,5",General physical activity contributing to health and body needs.
+18060.0,12.5,water activities,"canoeing, rowing, kayaking, competition, >6 mph, vigorous effort",1.0,"4,5",General physical activity contributing to health and body needs.
+18070.0,3.5,water activities,"canoeing, rowing, for pleasure, general (Taylor Code 250)",1.0,5,General physical activity contributing to health and body needs.
+18080.0,12.0,water activities,"canoeing, rowing, in competition, or crew or sculling (Taylor Code 260)",1.0,"3,4",General physical activity contributing to health and body needs.
+18090.0,3.0,water activities,"diving, springboard or platform",1.0,5,General physical activity contributing to health and body needs.
+18100.0,5.0,water activities,"kayaking, moderate effort",1.0,5,General physical activity contributing to health and body needs.
+18110.0,4.0,water activities,paddle boat,1.0,5,General physical activity contributing to health and body needs.
+18120.0,3.0,water activities,"sailing, boat and board sailing, windsurfing, ice sailing, general (Taylor Code 235)",1.0,"3,4,5",General physical activity contributing to health and body needs.
+18130.0,4.5,water activities,"sailing, in competition",1.0,4,General physical activity contributing to health and body needs.
+18140.0,3.3,water activities,"sailing, Sunfish/Laser/Hobby Cat, Keel boats, ocean sailing, yachting, leisure",1.0,5,Supports basic physical functioning and body maintenance.
+18150.0,6.0,water activities,"skiing, water or wakeboarding (Taylor Code 220)",1.0,"3,4,5",General physical activity contributing to health and body needs.
+18160.0,7.0,water activities,"jet skiing, driving, in water",1.0,5,General physical activity contributing to health and body needs.
+18180.0,15.8,water activities,"skindiving, fast",1.0,"4,5",General physical activity contributing to health and body needs.
+18190.0,11.8,water activities,"skindiving, moderate",1.0,5,General physical activity contributing to health and body needs.
+18200.0,7.0,water activities,"skindiving, scuba diving, general (Taylor Code 310)",1.0,"4,5",General physical activity contributing to health and body needs.
+18210.0,5.0,water activities,snorkeling (Taylor Code 310),1.0,5,General physical activity contributing to health and body needs.
+18220.0,3.0,water activities,"surfing, body or board, general",1.0,"3,4,5",General physical activity contributing to health and body needs.
+18222.0,5.0,water activities,"surfing, body or board, competitive",,4,"Involves achievement, recognition, or building self-esteem."
+18225.0,6.0,water activities,"paddle boarding, standing",1.0,"4,5",General physical activity contributing to health and body needs.
+18230.0,9.8,water activities,"swimming laps, freestyle, fast, vigorous effort",1.0,"4,5",General physical activity contributing to health and body needs.
+18240.0,5.8,water activities,"swimming laps, freestyle, front crawl, slow, light or moderate effort",1.0,1,Supports basic physical functioning and body maintenance.
+18250.0,9.5,water activities,"swimming, backstroke, general, training or competition",,"4,5","Related to maintaining safety, stability, or health security."
+18255.0,4.8,water activities,"swimming, backstroke, recreational",,5,Supports basic physical functioning and body maintenance.
+18260.0,10.3,water activities,"swimming, breaststroke, general, training or competition",,"3,4,5","Related to maintaining safety, stability, or health security."
+18265.0,5.3,water activities,"swimming, breaststroke, recreational",1.0,"4,5",Supports basic physical functioning and body maintenance.
+18270.0,13.8,water activities,"swimming, butterfly, general",1.0,"1,4",General physical activity contributing to health and body needs.
+18280.0,10.0,water activities,"swimming, crawl, fast speed, ~75 yards/minute, vigorous effort",1.0,4,General physical activity contributing to health and body needs.
+18290.0,8.3,water activities,"swimming, crawl, medium speed, ~50 yards/minute, vigorous effort",1.0,4,General physical activity contributing to health and body needs.
+18300.0,6.0,water activities,"swimming, lake, ocean, river (Taylor Codes 280, 295)",1.0,5,General physical activity contributing to health and body needs.
+18310.0,6.0,water activities,"swimming, leisurely, not lap swimming, general",1.0,5,Supports basic physical functioning and body maintenance.
+18320.0,7.0,water activities,"swimming, sidestroke, general",1.0,5,General physical activity contributing to health and body needs.
+18330.0,8.0,water activities,"swimming, synchronized",1.0,"3,4,5",General physical activity contributing to health and body needs.
+18340.0,9.8,water activities,"swimming, treading water, fast, vigorous effort",1.0,2,General physical activity contributing to health and body needs.
+18350.0,3.5,water activities,"swimming, treading water, moderate effort, general",1.0,1,General physical activity contributing to health and body needs.
+18352.0,2.3,water activities,"tubing, floating on a river, general",1.0,5,General physical activity contributing to health and body needs.
+18355.0,5.5,water activities,"water aerobics, water calisthenics",1.0,"1,3",General physical activity contributing to health and body needs.
+18360.0,10.0,water activities,water polo,1.0,"3,4",General physical activity contributing to health and body needs.
+18365.0,3.0,water activities,water volleyball,1.0,"3,4,5",General physical activity contributing to health and body needs.
+18366.0,9.8,water activities,water jogging,1.0,1,General physical activity contributing to health and body needs.
+18367.0,2.5,water activities,"water walking, light effort, slow pace",1.0,2,Supports basic physical functioning and body maintenance.
+18368.0,4.5,water activities,"water walking, moderate effort, moderate pace",1.0,2,General physical activity contributing to health and body needs.
+18369.0,6.8,water activities,"water walking, vigorous effort, brisk pace",1.0,2,General physical activity contributing to health and body needs.
+18370.0,5.0,water activities,"whitewater rafting, kayaking, or canoeing",1.0,"3,4,5",General physical activity contributing to health and body needs.
+18380.0,5.0,water activities,"windsurfing, not pumping for speed",1.0,5,General physical activity contributing to health and body needs.
+18385.0,11.0,water activities,"windsurfing or kitesurfing, crossing trial",1.0,"4,5",General physical activity contributing to health and body needs.
+18390.0,13.5,water activities,"windsurfing, competition, pumping for speed",1.0,"4,5",General physical activity contributing to health and body needs.
+19005.0,7.5,winter activities,"dog sledding, mushing",1.0,"4,5",General physical activity contributing to health and body needs.
+19006.0,2.5,winter activities,"dog sledding, passenger",1.0,5,General physical activity contributing to health and body needs.
+19010.0,6.0,winter activities,"moving ice house, set up/drill holes",1.0,5,General physical activity contributing to health and body needs.
+19011.0,2.0,winter activities,"ice fishing, sitting",1.0,"1,3,4",General physical activity contributing to health and body needs.
+19018.0,14.0,winter activities,"skating, ice dancing",1.0,"3,4,5",General physical activity contributing to health and body needs.
+19020.0,5.5,winter activities,"skating, ice, 9 mph or less",1.0,5,General physical activity contributing to health and body needs.
+19030.0,7.0,winter activities,"skating, ice, general (Taylor Code 360)",1.0,3,General physical activity contributing to health and body needs.
+19040.0,9.0,winter activities,"skating, ice, rapidly, more than 9 mph, not competitive",,"1,4,5","Involves achievement, recognition, or building self-esteem."
+19050.0,13.3,winter activities,"skating, speed, competitive",,"4,5","Involves achievement, recognition, or building self-esteem."
+19060.0,7.0,winter activities,"ski jumping, climb up carrying skis",1.0,"3,4,5",General physical activity contributing to health and body needs.
+19075.0,7.0,winter activities,"skiing, general",1.0,"3,4,5",General physical activity contributing to health and body needs.
+19080.0,6.8,winter activities,"skiing, cross country, 2.5 mph, slow or light effort, ski walking",1.0,"4,5",Supports basic physical functioning and body maintenance.
+19090.0,9.0,winter activities,"skiing, cross country, 4.0-4.9 mph, moderate speed and effort, general",1.0,"4,5",General physical activity contributing to health and body needs.
+19100.0,12.5,winter activities,"skiing, cross country, 5.0-7.9 mph, brisk speed, vigorous effort",1.0,"4,5",General physical activity contributing to health and body needs.
+19110.0,15.0,winter activities,"skiing, cross country, >8.0 mph, elite skier, racing",,5,"Involves achievement, recognition, or building self-esteem."
+19130.0,15.5,winter activities,"skiing, cross country, hard snow, uphill, maximum, snow mountaineering",,"4,5","Represents self-expression, challenge, or personal fulfillment."
+19135.0,13.3,winter activities,"skiing, cross-country, skating",1.0,"3,4,5",General physical activity contributing to health and body needs.
+19140.0,13.5,winter activities,"skiing, cross-country, biathlon, skating technique",1.0,"3,4,5",General physical activity contributing to health and body needs.
+19150.0,4.3,winter activities,"skiing, downhill, alpine or snowboarding, light effort, active time only",1.0,"3,4,5",Supports basic physical functioning and body maintenance.
+19160.0,5.3,winter activities,"skiing, downhill, alpine or snowboarding, moderate effort, general, active time only",1.0,"3,4,5",General physical activity contributing to health and body needs.
+19170.0,8.0,winter activities,"skiing, downhill, vigorous effort, racing",,"4,5","Involves achievement, recognition, or building self-esteem."
+19175.0,12.5,winter activities,"skiing, roller, elite racers",,"4,5","Involves achievement, recognition, or building self-esteem."
+19180.0,7.0,winter activities,"sledding, tobogganing, bobsledding, luge (Taylor Code 370)",1.0,"3,4",General physical activity contributing to health and body needs.
+19190.0,5.3,winter activities,"snow shoeing, moderate effort",1.0,"3,4,5",General physical activity contributing to health and body needs.
+19192.0,10.0,winter activities,"snow shoeing, vigorous effort",1.0,"1,3,4,5",General physical activity contributing to health and body needs.
+19200.0,3.5,winter activities,"snowmobiling, driving, moderate",1.0,"3,4",General physical activity contributing to health and body needs.
+19202.0,2.0,winter activities,"snowmobiling, passenger",1.0,3,General physical activity contributing to health and body needs.
+19252.0,5.3,winter activities,"snow shoveling, by hand, moderate effort",1.0,2,General physical activity contributing to health and body needs.
+19254.0,7.5,winter activities,"snow shoveling, by hand, vigorous effort",1.0,2,General physical activity contributing to health and body needs.
+19260.0,2.5,winter activities,"snow blower, walking and pushing",1.0,2,General physical activity contributing to health and body needs.
+20000.0,1.3,religious activities,"sitting in church, in service, attending a ceremony, sitting quietly",,"3,5",General physical activity contributing to health and body needs.
+20001.0,2.0,religious activities,"sitting, playing an instrument at church",,5,General physical activity contributing to health and body needs.
+20005.0,1.8,religious activities,"sitting in church, talking or singing, attending a ceremony, sitting, active participation",,"3,4,5",General physical activity contributing to health and body needs.
+20010.0,1.3,religious activities,"sitting, reading religious materials at home",,5,General physical activity contributing to health and body needs.
+20015.0,1.3,religious activities,"standing quietly in church, attending a ceremony",,"3,5",General physical activity contributing to health and body needs.
+20020.0,2.0,religious activities,"standing, singing in church, attending a ceremony, standing, active participation",,"3,5",General physical activity contributing to health and body needs.
+20025.0,1.3,religious activities,"kneeling in church or at home, praying",,5,General physical activity contributing to health and body needs.
+20030.0,1.8,religious activities,"standing, talking in church",,5,General physical activity contributing to health and body needs.
+20035.0,2.0,religious activities,walking in church,,5,General physical activity contributing to health and body needs.
+20036.0,2.0,religious activities,"walking, less than 2.0 mph, very slow",,5,Supports basic physical functioning and body maintenance.
+20037.0,3.5,religious activities,"walking, 3.0 mph, moderate speed, not carrying anything",,5,General physical activity contributing to health and body needs.
+20038.0,4.3,religious activities,"walking, 3.5 mph, brisk speed, not carrying anything",,5,General physical activity contributing to health and body needs.
+20039.0,2.0,religious activities,"walk/stand combination for religious purposes, usher",,"3,4,5",General physical activity contributing to health and body needs.
+20040.0,5.0,religious activities,"praise with dance or run, spiritual dancing in church",,5,Involves social connection or group belonging.
+20045.0,2.5,religious activities,serving food at church,,5,General physical activity contributing to health and body needs.
+20046.0,2.0,religious activities,preparing food at church,,"1,3,4,5",General physical activity contributing to health and body needs.
+20047.0,3.3,religious activities,"washing dishes, cleaning kitchen at church",,5,General physical activity contributing to health and body needs.
+20050.0,1.5,religious activities,eating at church,,"1,3",Supports basic physical functioning and body maintenance.
+20055.0,2.0,religious activities,"eating/talking at church or standing eating, American Indian Feast days",,"1,3,5",Supports basic physical functioning and body maintenance.
+20060.0,3.3,religious activities,cleaning church,,5,General physical activity contributing to health and body needs.
+20061.0,4.0,religious activities,general yard work at church,1.0,5,"Related to maintaining safety, stability, or health security."
+20065.0,3.5,religious activities,"standing, moderate effort (e.g., lifting heavy objects, assembling at fast rate)",,"3,5",General physical activity contributing to health and body needs.
+20095.0,4.5,religious activities,"Standing, moderate-to-heavy effort, manual labor, lifting ≥ 50 lbs, heavy maintenance",,"3,4,5",General physical activity contributing to health and body needs.
+20100.0,1.3,religious activities,"typing, electric, manual, or computer",,"3,4,5",General physical activity contributing to health and body needs.
+21000.0,1.5,volunteer activities,"sitting, meeting, general, and/or with talking involved",,"3,4,5",General physical activity contributing to health and body needs.
+21005.0,1.5,volunteer activities,"sitting, light office work, in general",,5,Supports basic physical functioning and body maintenance.
+21010.0,2.5,volunteer activities,"sitting, moderate work",,"3,4,5","Related to maintaining safety, stability, or health security."
+21015.0,2.3,volunteer activities,"standing, light work (filing, talking, assembling)",,"3,4,5",Supports basic physical functioning and body maintenance.
+21016.0,2.0,volunteer activities,"sitting, child care, only active periods",,"3,4,5",General physical activity contributing to health and body needs.
+21017.0,3.0,volunteer activities,"standing, child care, only active periods",,"3,4",General physical activity contributing to health and body needs.
+21018.0,3.5,volunteer activities,"walk/run play with children, moderate, only active periods",,"3,4,5",General physical activity contributing to health and body needs.
+21019.0,5.8,volunteer activities,"walk/run play with children, vigorous, only active periods",,"3,4",General physical activity contributing to health and body needs.
+21020.0,3.0,volunteer activities,"standing, light/moderate work (e.g., pack boxes, assemble/repair, set up chairs/furniture)",,5,Supports basic physical functioning and body maintenance.
+21025.0,3.5,volunteer activities,"standing, moderate (lifting 50 lbs., assembling at fast rate)",,5,General physical activity contributing to health and body needs.
+21030.0,4.5,volunteer activities,"standing, moderate/heavy work",,"3,4,5","Related to maintaining safety, stability, or health security."
+21035.0,1.3,volunteer activities,"typing, electric, manual, or computer",,5,General physical activity contributing to health and body needs.
+21040.0,2.0,volunteer activities,"walking, less than 2.0 mph, very slow",,"3,4,5",Supports basic physical functioning and body maintenance.
+21045.0,3.5,volunteer activities,"walking, 3.0 mph, moderate speed, not carrying anything",,5,General physical activity contributing to health and body needs.
+21050.0,4.3,volunteer activities,"walking, 3.5 mph, brisk speed, not carrying anything",,5,General physical activity contributing to health and body needs.
+21055.0,3.5,volunteer activities,"walking, 2.5 mph slowly and carrying objects less than 25 lbs",,5,Supports basic physical functioning and body maintenance.
+21060.0,4.5,volunteer activities,"walking, 3.0 mph moderately and carrying objects less than 25 lbs, pushing something",,5,General physical activity contributing to health and body needs.
+21065.0,4.8,volunteer activities,"walking, 3.5 mph, briskly and carrying objects less than 25 lbs",,5,General physical activity contributing to health and body needs.
+21070.0,3.0,volunteer activities,"walk/stand combination, for volunteer purposes",,"3,4",General physical activity contributing to health and body needs.

@@ -1,0 +1,117 @@
+"""
+pymaslow
+========
+
+Temporal Maslow Hierarchy in Python: computational tools for modeling the
+diurnal rhythms of human motivational needs from daily activity data.
+
+Submodules
+----------
+- :mod:`pymaslow.data` -- embedded MHN-annotated Compendium of Physical
+  Activities.
+- :mod:`pymaslow.hierarchy` -- hierarchy definitions, label parsing, and the
+  LLM prompt template for hierarchy identification.
+- :mod:`pymaslow.markov` -- Markov chains over need hierarchies.
+- :mod:`pymaslow.vonMisesMixture` -- von Mises mixture models ``p(t | hierarchy)``
+  of time-of-day, with embedded resampled CAPTURE-24 data and fitted
+  parameters, plotting, and sampling.
+- :mod:`pymaslow.circularkde` -- circular kernel density estimation.
+- :mod:`pymaslow.dirichlet` -- Dirichlet models of compositional need profiles.
+- :mod:`pymaslow.hmm` -- hidden Markov models with duration emissions.
+- :mod:`pymaslow.timeutils` -- time-of-day <-> angle conversion helpers.
+- :mod:`pymaslow.plotting` -- visualizations (import explicitly; pulls in
+  matplotlib).
+"""
+
+from __future__ import annotations
+
+from . import dirichlet, vonMisesMixture
+from .circularkde import CircularKDE, fit_circular_kde
+from .data import get_activity_hierarchy_map, load_compendium
+from .hierarchy import (
+  HIERARCHY_DESCRIPTIONS,
+  HIERARCHY_NAMES,
+  HIERARCHY_SHORT_NAMES,
+  LLM_PROMPT_TEMPLATE,
+  LLM_SYSTEM_MESSAGE,
+  N_HIERARCHIES,
+  build_hierarchy_prompt,
+  format_mhn,
+  mhn_to_vector,
+  parse_mhn,
+)
+from .hmm import ExponentialHMM, LognormalHMM  # pyright: ignore[reportMissingImports]
+from .markov import (  # pyright: ignore[reportMissingImports]
+  MarkovChain,
+  build_transition_counts,
+)
+from .timeutils import (  # pyright: ignore[reportMissingImports]
+  SECONDS_PER_DAY,
+  SECONDS_PER_HOUR,
+  CircularTimeModel,
+  format_time,
+  hours_to_rad,
+  rad_to_hours,
+  rad_to_sec,
+  sec_to_rad,
+)
+from .vonMisesMixture import (  # pyright: ignore[reportMissingImports]
+  VonMisesMixture,
+  fit_vmmm_dictionary,
+  load_fitted_models,
+  load_resampled_data,
+  plot_vmmm_results,
+  sample_joint_vmmm,
+  sample_vmmm_dictionary,
+  sample_vonmises_mixture,
+)
+
+__version__ = "0.2.0"
+
+__all__ = [  # noqa: RUF022 -- grouped by submodule for readability
+  "__version__",
+  # submodules
+  "dirichlet",
+  "vonMisesMixture",
+  # data
+  "load_compendium",
+  "get_activity_hierarchy_map",
+  # hierarchy
+  "N_HIERARCHIES",
+  "HIERARCHY_NAMES",
+  "HIERARCHY_SHORT_NAMES",
+  "HIERARCHY_DESCRIPTIONS",
+  "LLM_PROMPT_TEMPLATE",
+  "LLM_SYSTEM_MESSAGE",
+  "parse_mhn",
+  "format_mhn",
+  "mhn_to_vector",
+  "build_hierarchy_prompt",
+  # markov
+  "MarkovChain",
+  "build_transition_counts",
+  # timeutils
+  "SECONDS_PER_DAY",
+  "SECONDS_PER_HOUR",
+  "sec_to_rad",
+  "rad_to_sec",
+  "hours_to_rad",
+  "rad_to_hours",
+  "format_time",
+  "CircularTimeModel",
+  # vonMisesMixture
+  "VonMisesMixture",
+  "fit_vmmm_dictionary",
+  "plot_vmmm_results",
+  "sample_vonmises_mixture",
+  "sample_vmmm_dictionary",
+  "sample_joint_vmmm",
+  "load_resampled_data",
+  "load_fitted_models",
+  # circularkde
+  "CircularKDE",
+  "fit_circular_kde",
+  # hmm
+  "ExponentialHMM",
+  "LognormalHMM",
+]
