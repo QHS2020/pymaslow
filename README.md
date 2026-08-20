@@ -13,6 +13,9 @@ the package provides:
 - **`pymaslow.hierarchy`** — hierarchy definitions, label parsing utilities,
   and the large-language-model (LLM) prompt template used to infer need
   hierarchies from raw activity descriptions.
+- **`pymaslow.prompts`** — the verbatim LLM prompt templates used to infer
+  need hierarchies for the CAPTURE-24, ETRI, and DailyLog2016 datasets,
+  with per-dataset builder functions.
 - **`pymaslow.markov`** — first-order Markov chains over need hierarchies:
   transition-count matrices from (multi-label) hierarchy sequences,
   row-normalized transition probabilities, stationary distributions, and

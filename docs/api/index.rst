@@ -13,6 +13,7 @@ Top-level package
    :maxdepth: 1
 
    pymaslow.hierarchy
+   pymaslow.prompts
    pymaslow.data
    pymaslow.markov
    pymaslow.vonMisesMixture

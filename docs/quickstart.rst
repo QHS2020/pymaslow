@@ -36,6 +36,38 @@ Hierarchy utilities
        "bicycling, mountain, uphill, vigorous", "bicycling"
    )
 
+LLM prompts for hierarchy identification
+----------------------------------------
+
+Raw activity datasets record *what* a person does but not *why*; the need
+hierarchy of each activity is inferred by a reasoning LLM. The
+:mod:`pymaslow.prompts` module ships the exact prompt templates used for
+the three datasets of the framework:
+
+.. code-block:: python
+
+   from pymaslow import prompts
+
+   # CAPTURE-24 (Compendium of Physical Activities nomenclature)
+   prompts.build_capture24_prompt("bicycling, mountain, uphill, vigorous",
+                                  "bicycling")
+
+   # ETRI (action---condition---place triples)
+   prompts.build_etri_prompt("work", "WITH_ONE", "other_indoor")
+
+   # DailyLog2016 (start-time---major---minor tuples, minor optional)
+   prompts.build_dailylog2016_prompt("13", "Socializing", "Somethingelse")
+
+   # dataset-dispatching helper
+   prompts.build_prompt("etri", action="work", condition="WITH_ONE",
+                        place="other_indoor")
+   prompts.get_prompt_template("capture24")
+   prompts.DATASETS            # ('capture24', 'etri', 'dailylog2016')
+   prompts.DEFAULT_MODEL       # 'deepseek-reasoner'
+
+Each user prompt is sent to the reasoning model together with the system
+message ``prompts.LLM_SYSTEM_MESSAGE`` (``"You are a helpful assistant"``).
+
 Markov chains over need hierarchies
 -----------------------------------
 

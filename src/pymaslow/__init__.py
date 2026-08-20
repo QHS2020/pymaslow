@@ -19,13 +19,15 @@ Submodules
 - :mod:`pymaslow.dirichlet` -- Dirichlet models of compositional need profiles.
 - :mod:`pymaslow.hmm` -- hidden Markov models with duration emissions.
 - :mod:`pymaslow.timeutils` -- time-of-day <-> angle conversion helpers.
+- :mod:`pymaslow.prompts` -- verbatim LLM prompt templates for hierarchy
+  identification on CAPTURE-24, ETRI, and DailyLog2016.
 - :mod:`pymaslow.plotting` -- visualizations (import explicitly; pulls in
   matplotlib).
 """
 
 from __future__ import annotations
 
-from . import dirichlet, vonMisesMixture
+from . import dirichlet, prompts, vonMisesMixture
 from .circularkde import CircularKDE, fit_circular_kde
 from .data import get_activity_hierarchy_map, load_compendium
 from .hierarchy import (
@@ -44,6 +46,18 @@ from .hmm import ExponentialHMM, LognormalHMM  # pyright: ignore[reportMissingIm
 from .markov import (  # pyright: ignore[reportMissingImports]
   MarkovChain,
   build_transition_counts,
+)
+from .prompts import (  # pyright: ignore[reportMissingImports]
+  CAPTURE24_PROMPT_TEMPLATE,
+  DAILYLOG2016_PROMPT_TEMPLATE,
+  DATASETS,
+  ETRI_PROMPT_TEMPLATE,
+  PROMPT_TEMPLATES,
+  build_capture24_prompt,
+  build_dailylog2016_prompt,
+  build_etri_prompt,
+  build_prompt,
+  get_prompt_template,
 )
 from .timeutils import (  # pyright: ignore[reportMissingImports]
   SECONDS_PER_DAY,
@@ -66,12 +80,13 @@ from .vonMisesMixture import (  # pyright: ignore[reportMissingImports]
   sample_vonmises_mixture,
 )
 
-__version__ = "0.2.0"
+__version__ = "0.3.0"
 
 __all__ = [  # noqa: RUF022 -- grouped by submodule for readability
   "__version__",
   # submodules
   "dirichlet",
+  "prompts",
   "vonMisesMixture",
   # data
   "load_compendium",
@@ -114,4 +129,15 @@ __all__ = [  # noqa: RUF022 -- grouped by submodule for readability
   # hmm
   "ExponentialHMM",
   "LognormalHMM",
+  # prompts
+  "DATASETS",
+  "CAPTURE24_PROMPT_TEMPLATE",
+  "ETRI_PROMPT_TEMPLATE",
+  "DAILYLOG2016_PROMPT_TEMPLATE",
+  "PROMPT_TEMPLATES",
+  "build_capture24_prompt",
+  "build_etri_prompt",
+  "build_dailylog2016_prompt",
+  "build_prompt",
+  "get_prompt_template",
 ]
