@@ -39,6 +39,7 @@ Features
    installation
    quickstart
    examples
+   datasets
 
 .. toctree::
    :maxdepth: 2
