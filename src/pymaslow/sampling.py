@@ -66,9 +66,7 @@ def _default_hmm():
         )
 
         data = load_hmm_data("capture24")
-        train, _, _ = train_test_split(
-            data, test_size_not_percent=20, random_state=42
-        )
+        train, _, _ = train_test_split(data, test_size_not_percent=20, random_state=42)
         _DEFAULT_HMM = CategoricalMaslowHMM().fit_supervised(train[0], train[1])
     return _DEFAULT_HMM
 
@@ -93,6 +91,39 @@ def _default_vmmm():
     return p_x, models
 
 
+def _resolve_vmmm(model_vonmisesmixture) -> tuple[dict, dict]:
+    """Normalize the ``model_vonmisesmixture`` argument to ``(p_x, models)``.
+
+    Accepts None (embedded fitted model), a ``(p_x, models)`` or
+    ``(p_x, models, best_k)`` tuple as returned by
+    :func:`pymaslow.fit_vmmm_dictionary` / :func:`pymaslow.load_fitted_models`,
+    a dict with ``"p_x"`` and ``"models"`` keys, or any object with
+    ``p_x``/``models`` attributes (e.g. the :mod:`pymaslow.vonMisesMixture`
+    module itself).
+    """
+    if model_vonmisesmixture is None:
+        return _default_vmmm()
+    if isinstance(model_vonmisesmixture, dict):
+        try:
+            return model_vonmisesmixture["p_x"], model_vonmisesmixture["models"]
+        except KeyError as exc:
+            raise ValueError(
+                'model_vonmisesmixture dict must have "p_x" and "models" keys'
+            ) from exc
+    if isinstance(model_vonmisesmixture, (tuple, list)):
+        if len(model_vonmisesmixture) >= 2:
+            return model_vonmisesmixture[0], model_vonmisesmixture[1]
+        raise ValueError(
+            "model_vonmisesmixture tuple must be (p_x, models[, best_k])"
+        )
+    if hasattr(model_vonmisesmixture, "p_x") and hasattr(model_vonmisesmixture, "models"):
+        return model_vonmisesmixture.p_x, model_vonmisesmixture.models
+    raise ValueError(
+        "model_vonmisesmixture must be None, a (p_x, models[, best_k]) tuple, "
+        'a dict with "p_x"/"models" keys, or an object with p_x/models attributes'
+    )
+
+
 def _hierarchy_level(hierarchy) -> int:
     """Parse a hierarchy label (``"1"``..``"5"`` or 1..5) to its level."""
     try:
@@ -106,8 +137,7 @@ def _hierarchy_level(hierarchy) -> int:
 
 def sample_hierarchy_given_time(
     t_hours: float,
-    p_x: dict | None = None,
-    models: dict | None = None,
+    model_vonmisesmixture=None,
     random_state=None,
 ) -> str:
     """Sample the need hierarchy at time ``t_hours`` from ``p(h | t)``.
@@ -120,9 +150,9 @@ def sample_hierarchy_given_time(
     ----------
     t_hours : float
         Time of day in hours ``[0, 24)``.
-    p_x, models : dict or None
-        Hierarchy prior and per-hierarchy :class:`VonMisesMixture`
-        conditionals; defaults to the embedded fitted model.
+    model_vonmisesmixture : tuple, dict, object, or None
+        The joint von Mises mixture model; default: the embedded fitted
+        model. See :func:`sample_sequence` for the accepted forms.
     random_state : int or np.random.Generator, optional
         Seed or generator for reproducibility.
 
@@ -131,8 +161,7 @@ def sample_hierarchy_given_time(
     str
         The sampled hierarchy level label, e.g. ``"1"``.
     """
-    if p_x is None or models is None:
-        p_x, models = _default_vmmm()
+    p_x, models = _resolve_vmmm(model_vonmisesmixture)
     rng = np.random.default_rng(random_state)
 
     try:
@@ -154,7 +183,7 @@ def sample_hierarchy_given_time(
 
 def sample_activity_given_hierarchy(
     hierarchy,
-    hmm_model=None,
+    model_categoricalhmm=None,
     random_state=None,
 ) -> int:
     """Sample an activity id from the HMM emission ``p(a | hierarchy)``.
@@ -164,8 +193,8 @@ def sample_activity_given_hierarchy(
     hierarchy : str or int
         Need-hierarchy level (``"1"``..``"5"`` or 1..5); mapped to the
         corresponding single-level hidden state of the HMM.
-    hmm_model : CategoricalMaslowHMM or None
-        A fitted categorical HMM; defaults to one fitted on the embedded
+    model_categoricalhmm : CategoricalMaslowHMM or None
+        A fitted categorical HMM; default: one fitted on the embedded
         CAPTURE-24 training set.
     random_state : int or np.random.Generator, optional
         Seed or generator for reproducibility.
@@ -175,15 +204,17 @@ def sample_activity_given_hierarchy(
     int
         The sampled activity id (Compendium row index).
     """
-    if hmm_model is None:
-        hmm_model = _default_hmm()
-    if hmm_model.emission_prob_ is None:
-        raise RuntimeError("hmm_model is not fitted; call fit_supervised() first.")
+    if model_categoricalhmm is None:
+        model_categoricalhmm = _default_hmm()
+    if model_categoricalhmm.emission_prob_ is None:
+        raise RuntimeError(
+            "model_categoricalhmm is not fitted; call fit_supervised() first."
+        )
 
     state_id = _hierarchy_level(hierarchy) - 1  # single-level states are ids 0..4
 
     rng = np.random.default_rng(random_state)
-    row = hmm_model.emission_prob_[state_id]
+    row = model_categoricalhmm.emission_prob_[state_id]
     obs_ids = np.array(sorted(row.keys()))
     probs = np.array([row[o] for o in obs_ids], dtype=float)
     probs = probs / probs.sum()
@@ -231,10 +262,9 @@ def sample_sequence(
     t0: float | str = 2.0,
     n_activities: int | None = None,
     max_days: int = 1,
-    hmm_model=None,
-    duration_model=None,
-    p_x: dict | None = None,
-    models: dict | None = None,
+    model_duration=None,
+    model_categoricalhmm=None,
+    model_vonmisesmixture=None,
     log_scale_duration: bool = True,
     include_activity_names: bool = True,
     random_state=None,
@@ -256,16 +286,20 @@ def sample_sequence(
         ``max_days`` applies).
     max_days : int
         Maximum number of days to simulate (midnight crossings).
-    hmm_model : CategoricalMaslowHMM or None
-        Fitted categorical HMM; default: fitted on embedded CAPTURE-24 data.
-    duration_model : PositiveCircularKDE or None
+    model_duration : PositiveCircularKDE or None
         Fitted duration model; default: fitted on the embedded duration
         table.
-    p_x, models : dict or None
-        Von Mises mixture prior and conditionals; default: the embedded
-        pre-fitted model.
+    model_categoricalhmm : CategoricalMaslowHMM or None
+        Fitted categorical HMM; default: fitted on embedded CAPTURE-24 data.
+    model_vonmisesmixture : tuple, dict, object, or None
+        The joint von Mises mixture model; default: the embedded pre-fitted
+        model. Accepted forms: a ``(p_x, models)`` or
+        ``(p_x, models, best_k)`` tuple as returned by
+        :func:`pymaslow.fit_vmmm_dictionary`, a dict with ``"p_x"`` and
+        ``"models"`` keys, or any object with ``p_x``/``models`` attributes
+        (e.g. the :mod:`pymaslow.vonMisesMixture` module itself).
     log_scale_duration : bool
-        Whether ``duration_model`` returns log-duration samples (True for
+        Whether ``model_duration`` returns log-duration samples (True for
         the default embedded model, which follows the notebook's
         ``fit(log_duration=True)`` workflow); samples are then converted
         with ``np.exp``. Set False for a model fitted on raw durations.
@@ -291,13 +325,14 @@ def sample_sequence(
     dict_keys([...])
     """
     if n_activities is None and max_days is None:
-        raise ValueError("At least one of n_activities or max_days must bound the sampling")
-    if hmm_model is None:
-        hmm_model = _default_hmm()
-    if duration_model is None:
-        duration_model = _default_duration_model()
-    if p_x is None or models is None:
-        p_x, models = _default_vmmm()
+        raise ValueError(
+            "At least one of n_activities or max_days must bound the sampling"
+        )
+    if model_categoricalhmm is None:
+        model_categoricalhmm = _default_hmm()
+    if model_duration is None:
+        model_duration = _default_duration_model()
+    p_x, models = _resolve_vmmm(model_vonmisesmixture)
 
     rng = np.random.default_rng(random_state)
     t_current = _parse_t0(t0)
@@ -306,14 +341,18 @@ def sample_sequence(
     day = 0
     while day < max_days and (n_activities is None or len(records) < n_activities):
         # 1. hierarchy from the joint von Mises mixture posterior p(h | t)
-        hierarchy = sample_hierarchy_given_time(t_current, p_x, models, random_state=rng)
+        hierarchy = sample_hierarchy_given_time(
+            t_current, (p_x, models), random_state=rng
+        )
 
         # 2. activity from the HMM emission p(a | h)
-        activity_id = sample_activity_given_hierarchy(hierarchy, hmm_model, random_state=rng)
+        activity_id = sample_activity_given_hierarchy(
+            hierarchy, model_categoricalhmm, random_state=rng
+        )
 
         # 3. duration from the positive circular KDE p(d | t)
         duration = np.atleast_1d(
-            duration_model.sample_conditional(t_current, n_samples=1, random_state=rng)
+            model_duration.sample_conditional(t_current, n_samples=1, random_state=rng)
         )[0]
         duration_seconds = np.exp(duration) if log_scale_duration else duration
         duration_seconds = max(duration_seconds, 1.0)  # at least one second
