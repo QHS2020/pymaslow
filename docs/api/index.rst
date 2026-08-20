@@ -17,6 +17,7 @@ Top-level package
    pymaslow.data
    pymaslow.markov
    pymaslow.vonMisesMixture
+   pymaslow.durations
    pymaslow.circularkde
    pymaslow.dirichlet
    pymaslow.hmm

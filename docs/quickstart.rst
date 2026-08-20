@@ -134,6 +134,43 @@ Fitting your own data
        my_data, k_max=6, criterion="bic"
    )
 
+Durations: p(d, t)
+------------------
+
+Every activity serving a hierarchy lasts some duration, so at any instant
+each hierarchy carries a duration distribution. The
+:mod:`pymaslow.durations` module models the joint distribution of duration
+and time of day with a positive circular KDE (log-normal kernel for the
+duration axis, von Mises kernel for the circular time axis), fitted on the
+embedded CAPTURE-24 duration table:
+
+.. code-block:: python
+
+   from pymaslow import durations
+   import numpy as np
+
+   durations.data        # embedded table: moment, mhns, activity, duration
+
+   # explore the (moment, duration) relationship (2x2 grid)
+   fig, axes = durations.plot()                     # raw durations
+   fig, axes = durations.plot(log_duration=True)    # log-durations
+
+   # fit the positive circular KDE (notebook preprocessing: log-duration)
+   model = durations.fit()
+
+   # sample durations at specific times of day (log-duration scale)
+   samples_8am = model.sample_conditional(8.0, n_samples=1000, random_state=0)
+   samples_6pm = model.sample_conditional(18.0, n_samples=1000, random_state=0)
+   print(np.exp(samples_8am).mean() / 60, "minutes at 08:00")
+   print(np.exp(samples_6pm).mean() / 60, "minutes at 18:00")
+
+   # module-level shortcut (uses a default model fitted on the embedded data)
+   s = durations.sample_conditional([8.0, 18.0], n_samples=100, random_state=1)
+
+Note: with the default ``fit(log_duration=True)`` the model's positive
+variable is the *log-duration*; ``np.exp(samples)`` converts samples back
+to seconds.
+
 Circular KDE
 ------------
 

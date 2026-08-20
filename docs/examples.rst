@@ -47,3 +47,37 @@ prior :math:`p(\text{hierarchy})` and then a time of day from the
 corresponding conditional mixture — the sampled class frequencies match
 ``vmmm.p_x`` and the per-histogram shapes reproduce the fitted
 conditional densities.
+
+Durations and time of day
+--------------------------
+
+The :mod:`pymaslow.durations` module models the joint distribution of
+activity durations and their time of day on the embedded CAPTURE-24
+duration table (``durations.data``). The 2x2 overview grid is produced by:
+
+.. code-block:: python
+
+   from pymaslow import durations
+
+   fig, axes = durations.plot(log_duration=True, figsize=(10, 8))
+
+.. image:: _static/duration_moments_grid.png
+   :alt: Moments vs log-duration overview grid
+   :width: 100%
+
+Fitting the positive circular KDE (log-normal kernel for durations, von
+Mises kernel for the circular time axis) yields conditional duration
+distributions at any time of day:
+
+.. code-block:: python
+
+   model = durations.fit()
+   samples = model.sample_conditional(8.0, n_samples=3000, random_state=42)
+
+.. image:: _static/duration_conditional.png
+   :alt: Conditional duration distributions at 08:00, 13:00 and 20:00
+   :width: 100%
+
+With the default ``fit(log_duration=True)`` the model works on the
+log-duration scale; exponentiating the samples converts them back to
+seconds.

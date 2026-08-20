@@ -14,7 +14,9 @@ def test_datasets_registered():
 
 
 def test_capture24_prompt_verbatim_structure():
-    p = prompts.build_capture24_prompt("bicycling, mountain, uphill, vigorous", "bicycling")
+    p = prompts.build_capture24_prompt(
+        "bicycling, mountain, uphill, vigorous", "bicycling"
+    )
     assert '"bicycling, mountain, uphill, vigorous"' in p
     assert '"bicycling"' in p
     assert "maslow hierarchy" in p

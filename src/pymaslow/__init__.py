@@ -21,15 +21,20 @@ Submodules
 - :mod:`pymaslow.timeutils` -- time-of-day <-> angle conversion helpers.
 - :mod:`pymaslow.prompts` -- verbatim LLM prompt templates for hierarchy
   identification on CAPTURE-24, ETRI, and DailyLog2016.
+- :mod:`pymaslow.durations` -- joint duration/time-of-day modeling with the
+  positive circular KDE, with embedded CAPTURE-24 duration data.
 - :mod:`pymaslow.plotting` -- visualizations (import explicitly; pulls in
   matplotlib).
 """
 
 from __future__ import annotations
 
-from . import dirichlet, prompts, vonMisesMixture
+from . import dirichlet, durations, prompts, vonMisesMixture
 from .circularkde import CircularKDE, fit_circular_kde
 from .data import get_activity_hierarchy_map, load_compendium
+from .durations import (  # pyright: ignore[reportMissingImports]
+  PositiveCircularKDE,
+)
 from .hierarchy import (
   HIERARCHY_DESCRIPTIONS,
   HIERARCHY_NAMES,
@@ -80,12 +85,13 @@ from .vonMisesMixture import (  # pyright: ignore[reportMissingImports]
   sample_vonmises_mixture,
 )
 
-__version__ = "0.3.0"
+__version__ = "0.4.0"
 
 __all__ = [  # noqa: RUF022 -- grouped by submodule for readability
   "__version__",
   # submodules
   "dirichlet",
+  "durations",
   "prompts",
   "vonMisesMixture",
   # data
@@ -129,6 +135,8 @@ __all__ = [  # noqa: RUF022 -- grouped by submodule for readability
   # hmm
   "ExponentialHMM",
   "LognormalHMM",
+  # durations
+  "PositiveCircularKDE",
   # prompts
   "DATASETS",
   "CAPTURE24_PROMPT_TEMPLATE",

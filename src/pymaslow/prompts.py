@@ -152,9 +152,7 @@ def build_etri_prompt(action: str, condition: str, place: str) -> str:
     str
         The user-message text.
     """
-    return ETRI_PROMPT_TEMPLATE.format(
-        action=action, condition=condition, place=place
-    )
+    return ETRI_PROMPT_TEMPLATE.format(action=action, condition=condition, place=place)
 
 
 def build_dailylog2016_prompt(
@@ -195,9 +193,7 @@ def get_prompt_template(dataset: str) -> str:
     """
     key = dataset.lower()
     if key not in PROMPT_TEMPLATES:
-        raise ValueError(
-            f"Unknown dataset {dataset!r}; expected one of {DATASETS}"
-        )
+        raise ValueError(f"Unknown dataset {dataset!r}; expected one of {DATASETS}")
     return PROMPT_TEMPLATES[key]
 
 

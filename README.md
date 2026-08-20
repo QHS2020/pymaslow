@@ -28,6 +28,10 @@ the package provides:
   `best_k`) — available immediately on import, no raw data needed — plus
   plotting (`plot_vmmm_results`) and sampling (`sample_vonmises_mixture`,
   `sample_joint_vmmm`, `sample_vmmm_dictionary`) utilities.
+- **`pymaslow.durations`** — joint duration/time-of-day modeling with the
+  positive circular KDE (log-normal duration kernel + von Mises time
+  kernel), with the embedded CAPTURE-24 duration table, a 2x2 overview
+  plot, and conditional sampling `p(d | t)`.
 - **`pymaslow.circularkde`** — circular kernel density estimation of
   time-of-day distributions with boundary correction at midnight.
 - **`pymaslow.dirichlet`** — maximum-likelihood estimation of Dirichlet
