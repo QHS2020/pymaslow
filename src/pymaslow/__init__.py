@@ -31,7 +31,7 @@ Submodules
 
 from __future__ import annotations
 
-from . import dirichlet, durations, prompts, vonMisesMixture
+from . import dirichlet, durations, prompts, sampling, vonMisesMixture
 from .circularkde import CircularKDE, fit_circular_kde
 from .data import get_activity_hierarchy_map, load_compendium
 from .durations import (  # pyright: ignore[reportMissingImports]
@@ -97,7 +97,7 @@ from .vonMisesMixture import (  # pyright: ignore[reportMissingImports]
   sample_vonmises_mixture,
 )
 
-__version__ = "0.5.1"
+__version__ = "0.6.0"
 
 __all__ = [  # noqa: RUF022 -- grouped by submodule for readability
   "__version__",
@@ -105,6 +105,7 @@ __all__ = [  # noqa: RUF022 -- grouped by submodule for readability
   "dirichlet",
   "durations",
   "prompts",
+  "sampling",
   "vonMisesMixture",
   # data
   "load_compendium",

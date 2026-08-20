@@ -551,9 +551,7 @@ def estimate_hmm_parameters(
     transition_prob = {}
     for s in states:
         row_total = sum(transition_counts[s][s2] for s2 in states)
-        transition_prob[s] = {
-            s2: transition_counts[s][s2] / row_total for s2 in states
-        }
+        transition_prob[s] = {s2: transition_counts[s][s2] / row_total for s2 in states}
 
     emission_prob = {}
     for s in states:
@@ -623,7 +621,9 @@ def train_test_split(
         )
 
     rng = np.random.default_rng(random_state)
-    test_keys = set(rng.choice(sample_keys, size=test_size_not_percent, replace=False).tolist())
+    test_keys = set(
+        rng.choice(sample_keys, size=test_size_not_percent, replace=False).tolist()
+    )
     remaining = [k for k in sample_keys if k not in test_keys]
 
     validation_keys: set = set()
@@ -631,7 +631,9 @@ def train_test_split(
         if validation_size_not_percent > len(remaining) / 2:
             raise ValueError("too much validation test data")
         validation_keys = set(
-            rng.choice(remaining, size=validation_size_not_percent, replace=False).tolist()
+            rng.choice(
+                remaining, size=validation_size_not_percent, replace=False
+            ).tolist()
         )
         remaining = [k for k in remaining if k not in validation_keys]
 
@@ -675,14 +677,18 @@ class CategoricalMaslowHMM:
         Observation vocabulary size (default 824).
     """
 
-    def __init__(self, n_components: int = N_HIDDEN_STATES, n_observations: int = N_ACTIVITIES):
+    def __init__(
+        self, n_components: int = N_HIDDEN_STATES, n_observations: int = N_ACTIVITIES
+    ):
         if n_components <= 0 or n_observations <= 0:
             raise ValueError("n_components and n_observations must be positive")
         self.n_components = n_components
         self.n_observations = n_observations
         self._model = None
 
-    def fit_supervised(self, state_sequences, observation_sequences) -> CategoricalMaslowHMM:
+    def fit_supervised(
+        self, state_sequences, observation_sequences
+    ) -> CategoricalMaslowHMM:
         """Estimate parameters from labeled sequences and build the model.
 
         Parameters
@@ -714,9 +720,7 @@ class CategoricalMaslowHMM:
         )
 
         model = CategoricalHMM(n_components=self.n_components)
-        model.startprob_ = np.array(
-            [initial_prob[s] for s in range(self.n_components)]
-        )
+        model.startprob_ = np.array([initial_prob[s] for s in range(self.n_components)])
         model.transmat_ = np.array(
             [
                 [transition_prob[s1][s2] for s2 in range(self.n_components)]
@@ -755,8 +759,10 @@ class CategoricalMaslowHMM:
         """
         if self._model is None:
             raise RuntimeError("Model is not fitted; call fit_supervised() first.")
-        if lengths is None and len(observations) > 0 and isinstance(
-            observations[0], (list, tuple, np.ndarray)
+        if (
+            lengths is None
+            and len(observations) > 0
+            and isinstance(observations[0], (list, tuple, np.ndarray))
         ):
             lengths = [len(seq) for seq in observations]
             flat = [o for seq in observations for o in seq]
@@ -839,9 +845,12 @@ _ETRI_TUPLES_RESOURCE = "data/etri_action_condition_place_tuples.pickle"
 
 def _load_pickle_resource(resource_path: str):
     try:
-        with resources.as_file(
-            resources.files("pymaslow").joinpath(resource_path)
-        ) as path, open(path, "rb") as fh:
+        with (
+            resources.as_file(
+                resources.files("pymaslow").joinpath(resource_path)
+            ) as path,
+            open(path, "rb") as fh,
+        ):
             return pickle.load(fh)
     except (OSError, pickle.UnpicklingError) as exc:
         raise RuntimeError(

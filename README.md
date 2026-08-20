@@ -120,6 +120,16 @@ hierarchy = [[1, 1, 2, 3], [2, 2, 1]]
 durations = [[1800., 900., 3600., 1200.], [600., 300., 2400.]]
 hmm.fit_supervised(hierarchy, durations, verbose=False)
 print(hmm.predict([1500., 700., 3000.]))
+
+# --- Sample a full synthetic day by chaining the models ---------------------
+from pymaslow import sampling
+
+# hierarchy ~ p(h|t) (von Mises mixture posterior), activity ~ p(a|h) (HMM
+# emission), duration ~ p(d|t) (positive circular KDE); time advances by the
+# sampled duration. Uses the embedded pre-fitted models by default.
+diary = sampling.sample_sequence(t0="02:00", max_days=1, random_state=42)
+for rec in diary[:5]:
+    print(rec["start_time"], rec["hierarchy_name"], rec["activity"])
 ```
 
 ## Methodological background
