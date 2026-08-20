@@ -194,10 +194,52 @@ Dirichlet models of need profiles
 Hidden Markov models
 --------------------
 
+``pymaslow.hmm`` provides **two** HMM approaches for decoding the latent
+need hierarchy, plus the embedded CAPTURE-24/ETRI training data used in the
+companion study. The hidden state is the *set* of active need levels —
+``2**5 - 1 = 31`` multi-label states (:func:`pymaslow.hmm_states_definition`).
+
+**Embedded data and splitting.** ``hmm.data_capture24`` / ``hmm.data_etri``
+are loaded lazily on first access; ``train_test_split`` converts the raw
+states (multi-hot vectors for CAPTURE-24, label strings for ETRI) to state
+ids and splits by sample:
+
 .. code-block:: python
 
-   hmm = pymaslow.ExponentialHMM(n_states=5)
-   hierarchy = [[1, 1, 2, 3], [2, 2, 1]]
-   durations = [[1800.0, 900.0, 3600.0, 1200.0], [600.0, 300.0, 2400.0]]
-   hmm.fit_supervised(hierarchy, durations, verbose=False)
-   print(hmm.predict([1500.0, 700.0, 3000.0]))
+   from pymaslow import hmm
+
+   data = hmm.data_capture24            # 146 samples, loaded lazily
+   train, validation, test = hmm.train_test_split(
+       data, test_size_not_percent=20, validation_size_not_percent=10,
+       random_state=42,
+   )
+   train_states, train_activities, train_durations, train_lengths = train
+
+**Approach 1 — duration-emission HMMs** (``ExponentialHMM`` /
+``LognormalHMM``): hidden states are the need hierarchies, observations are
+activity *durations*; trained by supervised MLE, decoded with Viterbi:
+
+.. code-block:: python
+
+   model = hmm.LognormalHMM(n_states=31)
+   model.fit_supervised(train_states, train_durations, verbose=False)
+   predicted_states = model.predict(test[2][0])   # one duration sequence
+
+**Approach 2 — categorical HMM** (:class:`pymaslow.CategoricalMaslowHMM`,
+wrapping ``hmmlearn``): observations are *activity ids*; parameters are
+estimated by supervised MLE with Laplace smoothing and injected into a
+``hmmlearn.hmm.CategoricalHMM``:
+
+.. code-block:: python
+
+   cat = hmm.CategoricalMaslowHMM()   # 31 states, 824 activities
+   cat.fit_supervised(train_states, train_activities)
+   predicted = cat.predict(test[1])   # list of activity sequences
+
+   ground_truth = [s for seq in test[0] for s in seq]
+   print(hmm.metrics_classification(ground_truth, predicted))
+   # {'accuracy': 1.0, 'precision': 1.0, 'recall': 1.0, 'f1': 1.0}
+
+The ETRI variants load via ``hmm.data_etri`` and
+``hmm.etri_activity_definitions`` (the 184 ``(action, condition, place)``
+activity tuples).

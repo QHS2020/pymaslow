@@ -336,7 +336,9 @@ def sample_conditional(
     """
     if model is None:
         model = fit()
-    return model.sample_conditional(t_query, n_samples=n_samples, random_state=random_state)
+    return model.sample_conditional(
+        t_query, n_samples=n_samples, random_state=random_state
+    )
 
 
 # =============================================================================
@@ -425,7 +427,10 @@ def plot(
         duration_label = "Duration (seconds)"
 
     fig, axes = plt.subplots(
-        2, 2, figsize=figsize, gridspec_kw={"width_ratios": [1, 1.2], "height_ratios": [1.2, 1]}
+        2,
+        2,
+        figsize=figsize,
+        gridspec_kw={"width_ratios": [1, 1.2], "height_ratios": [1.2, 1]},
     )
 
     # (0, 0): marginal distribution of duration (horizontal, KDE overlay)
@@ -455,23 +460,42 @@ def plot(
 
     # (0, 1): heatmap + scatter overlay
     ax_heat_scatter = axes[0, 1]
-    heatmap, xedges, yedges = np.histogram2d(moments_arr, duration_arr, bins=heatmap_bins)
+    heatmap, xedges, yedges = np.histogram2d(
+        moments_arr, duration_arr, bins=heatmap_bins
+    )
     extent = [xedges[0], xedges[-1], yedges[0], yedges[-1]]
     im = ax_heat_scatter.imshow(
-        heatmap.T, origin="lower", extent=extent, aspect="auto", cmap="YlOrRd", alpha=0.7
+        heatmap.T,
+        origin="lower",
+        extent=extent,
+        aspect="auto",
+        cmap="YlOrRd",
+        alpha=0.7,
     )
     ax_heat_scatter.scatter(
-        moments_arr, duration_arr, alpha=scatter_alpha, s=10, c="blue", edgecolors="none"
+        moments_arr,
+        duration_arr,
+        alpha=scatter_alpha,
+        s=10,
+        c="blue",
+        edgecolors="none",
     )
     fig.colorbar(im, ax=ax_heat_scatter, label="Count")
     ax_heat_scatter.set_xlabel(moments_label)
     ax_heat_scatter.set_ylabel(duration_label)
-    ax_heat_scatter.set_title(f"{moments_label} vs {duration_label} (Heatmap + Scatter)")
+    ax_heat_scatter.set_title(
+        f"{moments_label} vs {duration_label} (Heatmap + Scatter)"
+    )
 
     # (1, 0): scatter with correlation coefficient
     ax_scatter = axes[1, 0]
     ax_scatter.scatter(
-        moments_arr, duration_arr, alpha=scatter_alpha, s=15, c="darkblue", edgecolors="none"
+        moments_arr,
+        duration_arr,
+        alpha=scatter_alpha,
+        s=15,
+        c="darkblue",
+        edgecolors="none",
     )
     ax_scatter.set_xlabel(moments_label)
     ax_scatter.set_ylabel(duration_label)
@@ -491,12 +515,19 @@ def plot(
     # (1, 1): marginal distribution of moments
     ax_moments_dist = axes[1, 1]
     ax_moments_dist.hist(
-        moments_arr, bins=bins, density=True, alpha=0.6, color="forestgreen", edgecolor="black"
+        moments_arr,
+        bins=bins,
+        density=True,
+        alpha=0.6,
+        color="forestgreen",
+        edgecolor="black",
     )
     try:
         moments_kde = gaussian_kde(moments_arr)
         moments_range = np.linspace(moments_arr.min(), moments_arr.max(), 200)
-        ax_moments_dist.plot(moments_range, moments_kde(moments_range), "r-", lw=2, label="KDE")
+        ax_moments_dist.plot(
+            moments_range, moments_kde(moments_range), "r-", lw=2, label="KDE"
+        )
         ax_moments_dist.legend()
     except (ValueError, np.linalg.LinAlgError):
         pass

@@ -81,3 +81,33 @@ distributions at any time of day:
 With the default ``fit(log_duration=True)`` the model works on the
 log-duration scale; exponentiating the samples converts them back to
 seconds.
+
+Decoding need hierarchies with the categorical HMM
+---------------------------------------------------
+
+The :class:`pymaslow.CategoricalMaslowHMM` is trained by supervised MLE on
+the embedded CAPTURE-24 training set and decodes the need-hierarchy state
+from activity sequences. Both the training and the evaluation below run
+entirely on embedded data:
+
+.. code-block:: python
+
+   from pymaslow import hmm
+
+   train, _, test = hmm.train_test_split(
+       hmm.data_capture24, test_size_not_percent=20, random_state=42
+   )
+   model = hmm.CategoricalMaslowHMM().fit_supervised(train[0], train[1])
+   pred = model.predict(test[1])
+   ground_truth = [s for seq in test[0] for s in seq]
+   print(hmm.metrics_classification(ground_truth, pred))
+   # {'accuracy': 1.0, 'precision': 1.0, 'recall': 1.0, 'f1': 1.0}
+
+.. image:: _static/hmm_categorical_confusion.png
+   :alt: Confusion matrix of the categorical HMM on the CAPTURE-24 test split
+   :width: 90%
+
+The hidden states are the 31 multi-label need-level combinations (e.g.
+``"1,2"`` = physiological + safety). The confusion matrix is log-scaled;
+the near-perfect decoding reflects the (by construction) tight mapping
+from activities to hierarchy states in the annotated data.

@@ -17,7 +17,9 @@ Submodules
   parameters, plotting, and sampling.
 - :mod:`pymaslow.circularkde` -- circular kernel density estimation.
 - :mod:`pymaslow.dirichlet` -- Dirichlet models of compositional need profiles.
-- :mod:`pymaslow.hmm` -- hidden Markov models with duration emissions.
+- :mod:`pymaslow.hmm` -- hidden Markov models for need-hierarchy decoding:
+  duration-emission models (exponential, lognormal) and the categorical
+  model over activities, with embedded CAPTURE-24/ETRI training data.
 - :mod:`pymaslow.timeutils` -- time-of-day <-> angle conversion helpers.
 - :mod:`pymaslow.prompts` -- verbatim LLM prompt templates for hierarchy
   identification on CAPTURE-24, ETRI, and DailyLog2016.
@@ -47,7 +49,17 @@ from .hierarchy import (
   mhn_to_vector,
   parse_mhn,
 )
-from .hmm import ExponentialHMM, LognormalHMM  # pyright: ignore[reportMissingImports]
+from .hmm import (  # pyright: ignore[reportMissingImports]
+  CategoricalMaslowHMM,
+  ExponentialHMM,
+  LognormalHMM,
+  estimate_hmm_parameters,
+  hmm_states_definition,
+  load_etri_activity_definitions,
+  load_hmm_data,
+  metrics_classification,
+  train_test_split,
+)
 from .markov import (  # pyright: ignore[reportMissingImports]
   MarkovChain,
   build_transition_counts,
@@ -85,7 +97,7 @@ from .vonMisesMixture import (  # pyright: ignore[reportMissingImports]
   sample_vonmises_mixture,
 )
 
-__version__ = "0.4.0"
+__version__ = "0.5.1"
 
 __all__ = [  # noqa: RUF022 -- grouped by submodule for readability
   "__version__",
@@ -135,6 +147,13 @@ __all__ = [  # noqa: RUF022 -- grouped by submodule for readability
   # hmm
   "ExponentialHMM",
   "LognormalHMM",
+  "CategoricalMaslowHMM",
+  "hmm_states_definition",
+  "estimate_hmm_parameters",
+  "train_test_split",
+  "metrics_classification",
+  "load_hmm_data",
+  "load_etri_activity_definitions",
   # durations
   "PositiveCircularKDE",
   # prompts

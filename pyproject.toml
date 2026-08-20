@@ -4,7 +4,7 @@ build-backend = "hatchling.build"
 
 [project]
 name = "pymaslow"
-version = "0.4.0"
+version = "0.5.1"
 description = "Temporal Maslow Hierarchy: computational tools for modeling diurnal rhythms of human motivational needs from activity data"
 readme = "README.md"
 license = "MIT"
@@ -44,6 +44,7 @@ dependencies = [
     "pandas>=1.4",
     "matplotlib>=3.5",
     "tqdm>=4.60",
+    "hmmlearn>=0.3",
 ]
 
 [project.optional-dependencies]
