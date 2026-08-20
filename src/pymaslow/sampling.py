@@ -113,10 +113,10 @@ def _resolve_vmmm(model_vonmisesmixture) -> tuple[dict, dict]:
     if isinstance(model_vonmisesmixture, (tuple, list)):
         if len(model_vonmisesmixture) >= 2:
             return model_vonmisesmixture[0], model_vonmisesmixture[1]
-        raise ValueError(
-            "model_vonmisesmixture tuple must be (p_x, models[, best_k])"
-        )
-    if hasattr(model_vonmisesmixture, "p_x") and hasattr(model_vonmisesmixture, "models"):
+        raise ValueError("model_vonmisesmixture tuple must be (p_x, models[, best_k])")
+    if hasattr(model_vonmisesmixture, "p_x") and hasattr(
+        model_vonmisesmixture, "models"
+    ):
         return model_vonmisesmixture.p_x, model_vonmisesmixture.models
     raise ValueError(
         "model_vonmisesmixture must be None, a (p_x, models[, best_k]) tuple, "
@@ -181,6 +181,37 @@ def sample_hierarchy_given_time(
     return str(rng.choice(classes, p=weights))
 
 
+def _emission_probs_for_state(model_categoricalhmm, state_id: int):
+    """Emission probability row ``p(a | state_id)`` as ``(obs_ids, probs)``.
+
+    Accepts a fitted :class:`pymaslow.CategoricalMaslowHMM` (dict attribute
+    ``emission_prob_`` or hmmlearn-convention ``emissionprob_``) or a raw
+    :class:`hmmlearn.hmm.CategoricalHMM` (ndarray attribute
+    ``emissionprob_``).
+    """
+    # dict form (CategoricalMaslowHMM MLE parameters)
+    emission_dict = getattr(model_categoricalhmm, "emission_prob_", None)
+    if isinstance(emission_dict, dict):
+        row = emission_dict[state_id]
+        obs_ids = np.array(sorted(row.keys()))
+        probs = np.array([row[o] for o in obs_ids], dtype=float)
+        probs = probs / probs.sum()
+        return obs_ids, probs
+
+    # ndarray form (hmmlearn naming, also exposed by CategoricalMaslowHMM)
+    emission_mat = getattr(model_categoricalhmm, "emissionprob_", None)
+    if emission_mat is not None:
+        probs = np.asarray(emission_mat[state_id], dtype=float)
+        probs = probs / probs.sum()
+        return np.arange(len(probs)), probs
+
+    raise RuntimeError(
+        "model_categoricalhmm is not a fitted categorical HMM: expected a "
+        "fitted pymaslow.CategoricalMaslowHMM or hmmlearn CategoricalHMM "
+        "(with 'emissionprob_')."
+    )
+
+
 def sample_activity_given_hierarchy(
     hierarchy,
     model_categoricalhmm=None,
@@ -193,9 +224,11 @@ def sample_activity_given_hierarchy(
     hierarchy : str or int
         Need-hierarchy level (``"1"``..``"5"`` or 1..5); mapped to the
         corresponding single-level hidden state of the HMM.
-    model_categoricalhmm : CategoricalMaslowHMM or None
-        A fitted categorical HMM; default: one fitted on the embedded
-        CAPTURE-24 training set.
+    model_categoricalhmm : CategoricalMaslowHMM, hmmlearn CategoricalHMM, or None
+        A fitted categorical HMM; default: a CategoricalMaslowHMM fitted on
+        the embedded CAPTURE-24 training set. A raw
+        :class:`hmmlearn.hmm.CategoricalHMM` (with ``emissionprob_`` set)
+        is also accepted.
     random_state : int or np.random.Generator, optional
         Seed or generator for reproducibility.
 
@@ -206,18 +239,11 @@ def sample_activity_given_hierarchy(
     """
     if model_categoricalhmm is None:
         model_categoricalhmm = _default_hmm()
-    if model_categoricalhmm.emission_prob_ is None:
-        raise RuntimeError(
-            "model_categoricalhmm is not fitted; call fit_supervised() first."
-        )
 
     state_id = _hierarchy_level(hierarchy) - 1  # single-level states are ids 0..4
 
     rng = np.random.default_rng(random_state)
-    row = model_categoricalhmm.emission_prob_[state_id]
-    obs_ids = np.array(sorted(row.keys()))
-    probs = np.array([row[o] for o in obs_ids], dtype=float)
-    probs = probs / probs.sum()
+    obs_ids, probs = _emission_probs_for_state(model_categoricalhmm, state_id)
     return rng.choice(obs_ids, p=probs).item()
 
 
@@ -289,8 +315,10 @@ def sample_sequence(
     model_duration : PositiveCircularKDE or None
         Fitted duration model; default: fitted on the embedded duration
         table.
-    model_categoricalhmm : CategoricalMaslowHMM or None
-        Fitted categorical HMM; default: fitted on embedded CAPTURE-24 data.
+    model_categoricalhmm : CategoricalMaslowHMM, hmmlearn CategoricalHMM, or None
+        Fitted categorical HMM (a raw :class:`hmmlearn.hmm.CategoricalHMM`
+        with ``emissionprob_`` set is also accepted); default: fitted on
+        embedded CAPTURE-24 data.
     model_vonmisesmixture : tuple, dict, object, or None
         The joint von Mises mixture model; default: the embedded pre-fitted
         model. Accepted forms: a ``(p_x, models)`` or

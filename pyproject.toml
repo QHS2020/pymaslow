@@ -4,7 +4,7 @@ build-backend = "hatchling.build"
 
 [project]
 name = "pymaslow"
-version = "0.6.1"
+version = "0.6.2"
 description = "Temporal Maslow Hierarchy: computational tools for modeling diurnal rhythms of human motivational needs from activity data"
 readme = "README.md"
 license = "MIT"

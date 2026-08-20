@@ -685,6 +685,27 @@ class CategoricalMaslowHMM:
         self.n_components = n_components
         self.n_observations = n_observations
         self._model = None
+        # MLE parameter dicts, available after fit_supervised()
+        self.initial_prob_: dict | None = None
+        self.transition_prob_: dict | None = None
+        self.emission_prob_: dict | None = None
+
+    # hmmlearn-convention accessors (available after fit_supervised())
+
+    @property
+    def startprob_(self) -> np.ndarray | None:
+        """Initial state probabilities (hmmlearn naming), shape (n_components,)."""
+        return None if self._model is None else self._model.startprob_
+
+    @property
+    def transmat_(self) -> np.ndarray | None:
+        """Transition matrix (hmmlearn naming), shape (n_components, n_components)."""
+        return None if self._model is None else self._model.transmat_
+
+    @property
+    def emissionprob_(self) -> np.ndarray | None:
+        """Emission matrix (hmmlearn naming), shape (n_components, n_observations)."""
+        return None if self._model is None else self._model.emissionprob_
 
     def fit_supervised(
         self, state_sequences, observation_sequences
