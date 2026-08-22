@@ -15,7 +15,7 @@ from __future__ import annotations
 import numpy as np
 import numpy.typing as npt
 
-__all__ = [
+__all__ = [  # noqa: RUF022 -- grouped by role for readability
     "SECONDS_PER_DAY",
     "SECONDS_PER_HOUR",
     "sec_to_rad",

@@ -40,7 +40,7 @@ import numpy as np
 import numpy.typing as npt
 from scipy.stats import gaussian_kde, norm, vonmises
 
-__all__ = [
+__all__ = [  # noqa: RUF022 -- grouped by role for readability
     "PositiveCircularKDE",
     "fit",
     "plot",

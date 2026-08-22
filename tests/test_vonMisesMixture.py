@@ -77,7 +77,7 @@ def test_fit_vmmm_dictionary():
         "a": _bimodal_hours(seed=1),
         "b": np.random.default_rng(2).normal(13, 1, 300) % 24,
     }
-    p_x, models, best_k = fit_vmmm_dictionary(
+    p_x, models, best_k, table = fit_vmmm_dictionary(
         data, k_max=4, criterion="bic", random_state=42, verbose=False
     )
     assert set(models) == {"a", "b"}
@@ -86,14 +86,30 @@ def test_fit_vmmm_dictionary():
     assert 1 <= best_k["a"] <= 4
     # bimodal class should need more components than the unimodal one
     assert best_k["a"] >= best_k["b"]
+    # the fitting results table summarizes every class
+    assert list(table.columns) == [
+        "class", "n", "p_x", "K", "logL", "AIC", "BIC", "peak_times",
+    ]
+    assert len(table) == 2
+    row_a = table.loc[table["class"] == "a"].iloc[0]
+    assert row_a["n"] == 800
+    assert row_a["K"] == best_k["a"]
+    np.testing.assert_allclose(row_a["p_x"], 800 / 1100)
+    # BIC penalizes parameters more than AIC for n > e^2, so BIC > AIC here
+    assert row_a["BIC"] > row_a["AIC"]
+    assert isinstance(row_a["peak_times"], str) and ":" in row_a["peak_times"]
 
 
 def test_fit_vmmm_dictionary_single_observation():
-    p_x, models, best_k = fit_vmmm_dictionary({"only": np.array([10.0])}, verbose=False)
+    p_x, models, best_k, table = fit_vmmm_dictionary(
+        {"only": np.array([10.0])}, verbose=False
+    )
     assert best_k["only"] == 1
     assert p_x["only"] == 1.0
     peak = models["only"].peak_times()[0]
     assert abs(peak - 10.0) < 0.1
+    row = table.loc[table["class"] == "only"].iloc[0]
+    assert row["K"] == 1 and row["n"] == 1
 
 
 # ---------------------------------------------------------------------

@@ -37,7 +37,7 @@ import numpy as np
 from scipy.stats import expon, lognorm
 from tqdm import tqdm
 
-__all__ = [
+__all__ = [  # noqa: RUF022 -- grouped by role for readability
     "CategoricalMaslowHMM",
     "ExponentialHMM",
     "LognormalHMM",

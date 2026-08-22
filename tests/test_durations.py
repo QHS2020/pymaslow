@@ -1,4 +1,4 @@
-"""Unit tests for the pymaslow.durations module."""
+"""Unit tests for pymaslow.durations."""
 
 import matplotlib
 
@@ -131,7 +131,7 @@ def test_module_sample_conditional():
 
 
 def test_plot_default_and_save(tmp_path):
-    fig, axes = durations.plot(save_path=str(tmp_path / "dur.png"))
+    _fig, axes = durations.plot(save_path=str(tmp_path / "dur.png"))
     assert axes.shape == (2, 2)
     assert (tmp_path / "dur.png").exists()
 

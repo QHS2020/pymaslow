@@ -98,10 +98,11 @@ cls, times = pymaslow.sample_joint_vmmm(vmmm.p_x, vmmm.models, n_samples=1000, s
 h1_times = pymaslow.sample_vonmises_mixture(vmmm.models["1"], n_samples=500, seed=1,
                                             return_radians=False)
 
-# fit your own data (hours of day per class)
-p_x, models, best_k = pymaslow.fit_vmmm_dictionary(
+# fit your own data (hours of day per class); also returns a results table
+p_x, models, best_k, table = pymaslow.fit_vmmm_dictionary(
     {"meals": np.array([7.5, 8.0, 12.2, 12.5, 18.7, 19.1] * 20)}, verbose=False
 )
+print(table[["class", "n", "K", "BIC", "peak_times"]])  # per-class fitting summary
 
 # --- Circular KDE of time-of-day ---------------------------------------------
 rng = np.random.default_rng(42)

@@ -81,9 +81,7 @@ def test_train_test_split_reproducible_and_converts_states():
 
 def test_train_test_split_etri_string_states():
     data = hmm.load_hmm_data("etri")
-    train, _, test = hmm.train_test_split(
-        data, test_size_not_percent=4, random_state=0
-    )
+    train, _, test = hmm.train_test_split(data, test_size_not_percent=4, random_state=0)
     all_ids = {s for seq in train[0] + test[0] for s in seq}
     assert min(all_ids) >= 0 and max(all_ids) < 31
 

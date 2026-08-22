@@ -36,7 +36,7 @@ from .hierarchy import (  # pyright: ignore[reportMissingImports]
     build_hierarchy_prompt,
 )
 
-__all__ = [
+__all__ = [  # noqa: RUF022 -- grouped by role for readability
     "LLM_SYSTEM_MESSAGE",
     "DEFAULT_MODEL",
     "DATASETS",

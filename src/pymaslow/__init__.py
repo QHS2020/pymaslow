@@ -97,7 +97,7 @@ from .vonMisesMixture import (  # pyright: ignore[reportMissingImports]
   sample_vonmises_mixture,
 )
 
-__version__ = "0.6.2"
+__version__ = "0.6.3"
 
 __all__ = [  # noqa: RUF022 -- grouped by submodule for readability
   "__version__",

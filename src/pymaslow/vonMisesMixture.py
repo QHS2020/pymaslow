@@ -42,16 +42,18 @@ from importlib import resources
 import matplotlib.pyplot as plt
 import numpy as np
 import numpy.typing as npt
+import pandas as pd
 from scipy.special import logsumexp
 from scipy.stats import vonmises
 
 from .hierarchy import HIERARCHY_NAMES  # pyright: ignore[reportMissingImports]
 from .timeutils import (  # pyright: ignore[reportMissingImports]
+    format_time,
     hours_to_rad,
     rad_to_hours,
 )
 
-__all__ = [
+__all__ = [  # noqa: RUF022 -- grouped by role: class, fit, plot, sample, loaders, assets
     "VonMisesMixture",
     "fit_vmmm_dictionary",
     "plot_vmmm_results",
@@ -274,6 +276,27 @@ class VonMisesMixture:
 # =============================================================================
 
 
+def _result_row(c, n, p_x_c, k, log_l, model, y_lw, y_up) -> dict:
+    """One row of the fitting results table for class ``c``."""
+    k_eff = 3 * k - 1
+    aic = -2.0 * log_l + 2.0 * k_eff
+    bic = -2.0 * log_l + k_eff * np.log(n)
+    peak_hours = rad_to_hours(np.mod(model.mu, 2.0 * np.pi), y_lw, y_up)
+    peak_labels = format_time(np.asarray(peak_hours) * 3600.0)
+    if isinstance(peak_labels, str):
+        peak_labels = [peak_labels]
+    return {
+        "class": c,
+        "n": n,
+        "p_x": p_x_c,
+        "K": k,
+        "logL": log_l,
+        "AIC": aic,
+        "BIC": bic,
+        "peak_times": ", ".join(peak_labels),
+    }
+
+
 def fit_vmmm_dictionary(
     data_dict,
     y_lw: float = Y_LW,
@@ -322,10 +345,32 @@ def fit_vmmm_dictionary(
         i.e. ``p(t | x)``.
     best_k : dict
         Selected number of components per class.
+    fitting_results_table : pandas.DataFrame
+        Per-class fitting summary with one row per class and columns
+        ``class``, ``n`` (sample count), ``p_x`` (class prior), ``K``
+        (selected components), ``logL`` (log-likelihood of the selected
+        model), ``AIC``, ``BIC``, and ``peak_times`` (formatted ``HH:MM``
+        component peaks).
+
+    Examples
+    --------
+    Fit per-hierarchy occurrence times (hours of day) and inspect the
+    model-selection summary:
+
+    >>> import numpy as np
+    >>> from pymaslow import fit_vmmm_dictionary
+    >>> rng = np.random.default_rng(0)
+    >>> data = {
+    ...     "meals": (rng.normal([7.5, 12.3, 18.7], 0.4, (300, 3)) % 24).ravel(),
+    ...     "sleep": rng.normal(23.5, 1.0, 400) % 24,
+    ... }
+    >>> p_x, models, best_k, table = fit_vmmm_dictionary(data, k_max=4, verbose=False)
+    >>> table[["class", "n", "K", "BIC"]]  # doctest: +SKIP
     """
     p_x: dict = {}
     models: dict = {}
     best_k: dict = {}
+    result_rows: list[dict] = []
     total_n = sum(len(v) for v in data_dict.values())
 
     for c, times in data_dict.items():
@@ -346,14 +391,17 @@ def fit_vmmm_dictionary(
             vmm.weights = np.array([1.0])
             models[c] = vmm
             best_k[c] = 1
+            log_l = vmm.log_likelihood(x_rad)
             if verbose:
                 print(f"Class '{c}': n=1 -> forced K=1 (kappa={vmm.kappa[0]:.1f})")
+            result_rows.append(_result_row(c, n_c, p_x[c], 1, log_l, vmm, y_lw, y_up))
             continue
 
         cls_seed = random_state + zlib.crc32(str(c).encode()) % 1000
         best_score = np.inf
         best_model = None
         best_k_c = 1
+        best_log_l = -np.inf
         k_candidates = range(1, min(k_max, n_c // 3 + 1) + 1)
 
         for k in k_candidates:
@@ -373,6 +421,7 @@ def fit_vmmm_dictionary(
                     best_score = score
                     best_model = vmm
                     best_k_c = k
+                    best_log_l = log_l
             except (ValueError, FloatingPointError):
                 continue
 
@@ -383,8 +432,20 @@ def fit_vmmm_dictionary(
                 f"Class '{c}': n={n_c}, selected K={best_k_c} "
                 f"({criterion.upper()}={best_score:.1f})"
             )
+        result_rows.append(
+            _result_row(c, n_c, p_x[c], best_k_c, best_log_l, best_model, y_lw, y_up)
+        )
 
-    return p_x, models, best_k
+    fitting_results_table = pd.DataFrame.from_records(
+        result_rows,
+        columns=["class", "n", "p_x", "K", "logL", "AIC", "BIC", "peak_times"],
+    )
+
+    if verbose:
+        print("\nFitting results:")
+        print(fitting_results_table.to_string(index=False))
+
+    return p_x, models, best_k, fitting_results_table
 
 
 # =============================================================================

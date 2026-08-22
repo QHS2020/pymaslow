@@ -44,7 +44,7 @@ from .timeutils import (  # pyright: ignore[reportMissingImports]
     hours_to_rad,
 )
 
-__all__ = [
+__all__ = [  # noqa: RUF022 -- grouped by role for readability
     "sample_hierarchy_given_time",
     "sample_activity_given_hierarchy",
     "sample_sequence",
@@ -94,12 +94,12 @@ def _default_vmmm():
 def _resolve_vmmm(model_vonmisesmixture) -> tuple[dict, dict]:
     """Normalize the ``model_vonmisesmixture`` argument to ``(p_x, models)``.
 
-    Accepts None (embedded fitted model), a ``(p_x, models)`` or
-    ``(p_x, models, best_k)`` tuple as returned by
+    Accepts None (embedded fitted model), a ``(p_x, models[, best_k[,
+    fitting_results_table]])`` tuple as returned by
     :func:`pymaslow.fit_vmmm_dictionary` / :func:`pymaslow.load_fitted_models`,
     a dict with ``"p_x"`` and ``"models"`` keys, or any object with
     ``p_x``/``models`` attributes (e.g. the :mod:`pymaslow.vonMisesMixture`
-    module itself).
+    module itself). Extra tuple elements are ignored.
     """
     if model_vonmisesmixture is None:
         return _default_vmmm()
@@ -321,8 +321,8 @@ def sample_sequence(
         embedded CAPTURE-24 data.
     model_vonmisesmixture : tuple, dict, object, or None
         The joint von Mises mixture model; default: the embedded pre-fitted
-        model. Accepted forms: a ``(p_x, models)`` or
-        ``(p_x, models, best_k)`` tuple as returned by
+        model. Accepted forms: a ``(p_x, models[, best_k[,
+        fitting_results_table]])`` tuple as returned by
         :func:`pymaslow.fit_vmmm_dictionary`, a dict with ``"p_x"`` and
         ``"models"`` keys, or any object with ``p_x``/``models`` attributes
         (e.g. the :mod:`pymaslow.vonMisesMixture` module itself).
