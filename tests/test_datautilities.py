@@ -13,13 +13,17 @@ def _toy_capture24_df():
     codes = compendium["code"].dropna().unique()
     c0, c1 = float(codes[0]), float(codes[1])
     times = pd.to_datetime(
-        ["2024-01-01 07:00:00", "2024-01-01 08:30:00",
-         "2024-01-01 12:00:00", "2024-01-01 18:00:00"]
+        [
+            "2024-01-01 07:00:00",
+            "2024-01-01 08:30:00",
+            "2024-01-01 12:00:00",
+            "2024-01-01 18:00:00",
+        ]
     )
     annotations = [
-        f"{int(c0)} some activity;MET 1.5",   # valid code c0
+        f"{int(c0)} some activity;MET 1.5",  # valid code c0
         f"{int(c1)} other activity;MET 2.0",  # valid code c1
-        "999999 unknown activity;MET 9.9",    # code not in compendium
+        "999999 unknown activity;MET 9.9",  # code not in compendium
         f"{int(c0)} repeated activity;MET 1.5",  # valid again
     ]
     return pd.DataFrame({"time": times, "annotation": annotations}), (c0, c1)
@@ -81,9 +85,7 @@ def test_extract_time_hierarchy_custom_xlsx_schema():
 
 def test_extract_all_rows_invalid():
     times = pd.to_datetime(["2024-01-01 07:00:00"])
-    data = pd.DataFrame(
-        {"time": times, "annotation": ["999999 unknown;MET 1.0"]}
-    )
+    data = pd.DataFrame({"time": times, "annotation": ["999999 unknown;MET 1.0"]})
     out = datautilities.capture24_extract_time_hierarchy(data)
     assert out[5] == []  # nothing effective
     assert out[3] == []  # no MHNS

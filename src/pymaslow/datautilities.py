@@ -215,9 +215,7 @@ def capture24_collect_moments_per_hierarchy(
     """
     moments4hierarchies: dict[str, list] = {str(i): [] for i in [1, 2, 3, 4, 5]}
 
-    for t, _f, mhn in tqdm(
-        zip(TS, FLAGS, MHNS, strict=True), disable=not verbose
-    ):
+    for t, _f, mhn in tqdm(zip(TS, FLAGS, MHNS, strict=True), disable=not verbose):
         for h in str(mhn).split(","):
             moments4hierarchies[h].append(t)
 

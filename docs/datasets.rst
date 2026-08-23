@@ -136,6 +136,62 @@ over/undershoot from the KDE resampling). 19,997 samples in total:
    {k: len(v) for k, v in vmmm.data.items()}
    # {'1': 10506, '2': 5302, '3': 1478, '4': 859, '5': 1852}
 
+Resampled ETRI temporal hierarchy data
+--------------------------------------
+
+**Access:** ``pymaslow.ETRI_TemporalHierarchyData`` → ``dict[str, ndarray]``
+(loaded at import); also ``pymaslow.data.load_etri_temporal_hierarchy()``
+
+**Source file:** ``datas/resampled_ETRI.pickle`` (companion repository),
+embedded as ``data/resampled_ETRI.npz``.
+
+**Provenance.** The ETRI lifelog dataset (South Korea) provides the second
+cultural context of the framework. As with CAPTURE-24, the raw sequences
+are too large to ship, so the occurrence moments of each need hierarchy
+were KDE-resampled into a compact proxy preserving each hierarchy's
+temporal distribution. In the source pickle the keys are the ints 1–5;
+they are exposed as the strings ``"1"``..``"5"`` for consistency with the
+rest of the package.
+
+**Format.** Dictionary mapping hierarchy level to a 1D array of occurrence
+times in **hours of day** (~[0, 24]). 19,997 samples in total — note the
+different composition from CAPTURE-24 (esteem needs dominate in ETRI):
+
+.. list-table::
+   :header-rows: 1
+   :widths: 30 15 25
+
+   * - Hierarchy
+     - Samples
+     - Hours range
+   * - H1 Physiological Needs
+     - 3,829
+     - -0.93 – 24.86
+   * - H2 Safety Needs
+     - 3,360
+     - -1.35 – 24.67
+   * - H3 Love and Belonging Needs
+     - 4,221
+     - -0.32 – 24.32
+   * - H4 Esteem Needs
+     - 5,934
+     - -0.28 – 24.74
+   * - H5 Self-Actualization Needs
+     - 2,653
+     - -0.72 – 24.47
+
+.. code-block:: python
+
+   import pymaslow
+
+   {k: len(v) for k, v in pymaslow.ETRI_TemporalHierarchyData.items()}
+   # {'1': 3829, '2': 3360, '3': 4221, '4': 5934, '5': 2653}
+
+   # the ETRI data feeds the same fitting pipeline as CAPTURE-24
+   p_x, models, best_k, table = pymaslow.fit_vmmm_dictionary(
+       pymaslow.ETRI_TemporalHierarchyData, k_max=8
+   )
+
 CAPTURE-24 duration table
 -------------------------
 

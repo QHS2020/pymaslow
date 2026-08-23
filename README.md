@@ -9,7 +9,9 @@ datasets) whose activities have been mapped onto the five Maslow need levels,
 the package provides:
 
 - **`pymaslow.data`** — an embedded copy of the *Compendium of Physical
-  Activities* annotated with Maslow Hierarchy of Needs (MHN) labels.
+  Activities* annotated with Maslow Hierarchy of Needs (MHN) labels, plus
+  the resampled ETRI temporal hierarchy data
+  (`pymaslow.ETRI_TemporalHierarchyData`, loaded at import).
 - **`pymaslow.hierarchy`** — hierarchy definitions, label parsing utilities,
   and the large-language-model (LLM) prompt template used to infer need
   hierarchies from raw activity descriptions.

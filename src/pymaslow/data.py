@@ -18,6 +18,7 @@ from functools import lru_cache
 from importlib import resources
 from importlib.abc import Traversable
 
+import numpy as np
 import pandas as pd
 
 from .hierarchy import parse_mhn
@@ -25,12 +26,17 @@ from .hierarchy import parse_mhn
 __all__ = [
     "COMPENDIUM_COLUMNS",
     "COMPENDIUM_RESOURCE",
+    "ETRI_RESAMPLED_RESOURCE",
     "get_activity_hierarchy_map",
     "load_compendium",
+    "load_etri_temporal_hierarchy",
 ]
 
 #: Resource path (inside the package) of the embedded compendium CSV.
 COMPENDIUM_RESOURCE = "data/compendium_mhn.csv"
+
+#: Resource path of the embedded resampled ETRI temporal hierarchy data.
+ETRI_RESAMPLED_RESOURCE = "data/resampled_ETRI.npz"
 
 #: Column names of the embedded compendium dataframe.
 COMPENDIUM_COLUMNS = (
@@ -78,6 +84,32 @@ def load_compendium() -> pd.DataFrame:
     so mutating the result does not affect subsequent calls.
     """
     return _load_cached().copy()
+
+
+def load_etri_temporal_hierarchy() -> dict[str, np.ndarray]:
+    """Load the embedded resampled ETRI temporal hierarchy data.
+
+    The ETRI dataset (South Korea) does not ship in raw form; this is the
+    KDE-resampled occurrence-time proxy of each Maslow hierarchy level,
+    mirroring the CAPTURE-24 resampled data in
+    :mod:`pymaslow.vonMisesMixture`. In the source pickle
+    (``datas/resampled_ETRI.pickle``) the keys are the ints 1-5; they are
+    exposed here as the strings ``"1"`` to ``"5"`` for consistency with the
+    rest of the package.
+
+    Returns
+    -------
+    dict
+        Mapping of hierarchy level (``"1"``..``"5"``) to a 1D array of
+        occurrence times in **hours of day** (~[0, 24]; slight
+        over/undershoot from the KDE resampling). 19,997 samples in total:
+        H1=3829, H2=3360, H3=4221, H4=5934, H5=2653.
+    """
+    with resources.as_file(
+        resources.files("pymaslow").joinpath(ETRI_RESAMPLED_RESOURCE)
+    ) as path:
+        npz = np.load(path)
+        return {k: npz[k] for k in npz.files}
 
 
 def get_activity_hierarchy_map() -> dict[str, tuple[int, ...]]:

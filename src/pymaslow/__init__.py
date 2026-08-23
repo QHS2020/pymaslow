@@ -33,7 +33,11 @@ from __future__ import annotations
 
 from . import datautilities, dirichlet, durations, prompts, sampling, vonMisesMixture
 from .circularkde import CircularKDE, fit_circular_kde
-from .data import get_activity_hierarchy_map, load_compendium
+from .data import (
+  get_activity_hierarchy_map,
+  load_compendium,
+  load_etri_temporal_hierarchy,
+)
 from .durations import (  # pyright: ignore[reportMissingImports]
   PositiveCircularKDE,
 )
@@ -97,7 +101,13 @@ from .vonMisesMixture import (  # pyright: ignore[reportMissingImports]
   sample_vonmises_mixture,
 )
 
-__version__ = "0.7.0"
+__version__ = "0.7.1"
+
+#: Embedded resampled ETRI temporal hierarchy data: a dict mapping each
+#: Maslow hierarchy level (``"1"``..``"5"``) to its KDE-resampled occurrence
+#: times in hours of day (19,997 samples total). Loaded at import; see
+#: :func:`pymaslow.data.load_etri_temporal_hierarchy` for details.
+ETRI_TemporalHierarchyData = load_etri_temporal_hierarchy()
 
 __all__ = [  # noqa: RUF022 -- grouped by submodule for readability
   "__version__",
@@ -111,6 +121,8 @@ __all__ = [  # noqa: RUF022 -- grouped by submodule for readability
   # data
   "load_compendium",
   "get_activity_hierarchy_map",
+  "load_etri_temporal_hierarchy",
+  "ETRI_TemporalHierarchyData",
   # hierarchy
   "N_HIERARCHIES",
   "HIERARCHY_NAMES",
