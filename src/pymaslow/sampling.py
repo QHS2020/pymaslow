@@ -125,7 +125,7 @@ def _resolve_vmmm(model_vonmisesmixture) -> tuple[dict, dict]:
 
 
 def _hierarchy_level(hierarchy) -> int:
-    """Parse a hierarchy label (``"1"``..``"5"`` or 1..5) to its level."""
+    """Parse a hierarchy label (``"1"`` to ``"5"`` or 1..5) to its level."""
     try:
         level = int(hierarchy)
     except (TypeError, ValueError) as exc:
@@ -222,7 +222,7 @@ def sample_activity_given_hierarchy(
     Parameters
     ----------
     hierarchy : str or int
-        Need-hierarchy level (``"1"``..``"5"`` or 1..5); mapped to the
+        Need-hierarchy level (``"1"`` to ``"5"`` or 1..5); mapped to the
         corresponding single-level hidden state of the HMM.
     model_categoricalhmm : CategoricalMaslowHMM, hmmlearn CategoricalHMM, or None
         A fitted categorical HMM; default: a CategoricalMaslowHMM fitted on

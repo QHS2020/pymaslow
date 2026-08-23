@@ -150,7 +150,7 @@ cultural context of the framework. As with CAPTURE-24, the raw sequences
 are too large to ship, so the occurrence moments of each need hierarchy
 were KDE-resampled into a compact proxy preserving each hierarchy's
 temporal distribution. In the source pickle the keys are the ints 1–5;
-they are exposed as the strings ``"1"``..``"5"`` for consistency with the
+they are exposed as the strings ``"1"`` to ``"5"`` for consistency with the
 rest of the package.
 
 **Format.** Dictionary mapping hierarchy level to a 1D array of occurrence

@@ -18,7 +18,7 @@ KDE-resampled occurrence times instead (see the *resample data* section of
 ``notebooks/pymaslow.ipynb`` in the companion repository). On import, this
 module loads:
 
-- ``data`` -- dict mapping each hierarchy level (``"1"``..``"5"``) to the
+- ``data`` -- dict mapping each hierarchy level (``"1"`` to ``"5"``) to the
   resampled occurrence times, in hours ``[0, 24)``;
 - ``p_x`` -- the fitted hierarchy prior ``p(hierarchy)``;
 - ``models`` -- dict mapping each hierarchy level to its fitted
@@ -821,7 +821,7 @@ def load_resampled_data() -> dict[str, np.ndarray]:
     Returns
     -------
     dict
-        Mapping of hierarchy level (``"1"``..``"5"``) to occurrence times in
+        Mapping of hierarchy level (``"1"`` to ``"5"``) to occurrence times in
         hours ``[0, 24)`` (about 20,000 samples in total).
     """
     with resources.as_file(

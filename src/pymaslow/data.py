@@ -100,7 +100,7 @@ def load_etri_temporal_hierarchy() -> dict[str, np.ndarray]:
     Returns
     -------
     dict
-        Mapping of hierarchy level (``"1"``..``"5"``) to a 1D array of
+        Mapping of hierarchy level (``"1"`` to ``"5"``) to a 1D array of
         occurrence times in **hours of day** (~[0, 24]; slight
         over/undershoot from the KDE resampling). 19,997 samples in total:
         H1=3829, H2=3360, H3=4221, H4=5934, H5=2653.

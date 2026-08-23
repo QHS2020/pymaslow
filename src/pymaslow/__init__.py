@@ -104,7 +104,7 @@ from .vonMisesMixture import (  # pyright: ignore[reportMissingImports]
 __version__ = "0.7.1"
 
 #: Embedded resampled ETRI temporal hierarchy data: a dict mapping each
-#: Maslow hierarchy level (``"1"``..``"5"``) to its KDE-resampled occurrence
+#: Maslow hierarchy level (``"1"`` to ``"5"``) to its KDE-resampled occurrence
 #: times in hours of day (19,997 samples total). Loaded at import; see
 #: :func:`pymaslow.data.load_etri_temporal_hierarchy` for details.
 ETRI_TemporalHierarchyData = load_etri_temporal_hierarchy()
