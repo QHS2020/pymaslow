@@ -15,9 +15,11 @@ Top-level package
    pymaslow.hierarchy
    pymaslow.prompts
    pymaslow.data
+   pymaslow.datautilities
    pymaslow.markov
    pymaslow.vonMisesMixture
    pymaslow.durations
+   pymaslow.sampling
    pymaslow.circularkde
    pymaslow.dirichlet
    pymaslow.hmm

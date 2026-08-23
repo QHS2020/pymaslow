@@ -88,7 +88,14 @@ def test_fit_vmmm_dictionary():
     assert best_k["a"] >= best_k["b"]
     # the fitting results table summarizes every class
     assert list(table.columns) == [
-        "class", "n", "p_x", "K", "logL", "AIC", "BIC", "peak_times",
+        "class",
+        "n",
+        "p_x",
+        "K",
+        "logL",
+        "AIC",
+        "BIC",
+        "peak_times",
     ]
     assert len(table) == 2
     row_a = table.loc[table["class"] == "a"].iloc[0]

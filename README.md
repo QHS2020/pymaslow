@@ -16,6 +16,9 @@ the package provides:
 - **`pymaslow.prompts`** — the verbatim LLM prompt templates used to infer
   need hierarchies for the CAPTURE-24, ETRI, and DailyLog2016 datasets,
   with per-dataset builder functions.
+- **`pymaslow.datautilities`** — data processing from raw CAPTURE-24 csv
+  files to aligned (time, hierarchy) streams: annotation parsing, compendium
+  code lookup, and per-hierarchy moment collection.
 - **`pymaslow.markov`** — first-order Markov chains over need hierarchies:
   transition-count matrices from (multi-label) hierarchy sequences,
   row-normalized transition probabilities, stationary distributions, and

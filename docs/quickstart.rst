@@ -130,9 +130,42 @@ Fitting your own data
        "meals":  (rng.normal([7.5, 12.3, 18.7], 0.4, (300, 3)) % 24).ravel(),
        "sleep":  (rng.normal(23.5, 1.0, 400) % 24),
    }
-   p_x, models, best_k = pymaslow.fit_vmmm_dictionary(
+   p_x, models, best_k, table = pymaslow.fit_vmmm_dictionary(
        my_data, k_max=6, criterion="bic"
    )
+   print(table)  # per-class summary: n, p_x, K, logL, AIC, BIC, peak_times
+
+Processing raw CAPTURE-24 data
+------------------------------
+
+The :mod:`pymaslow.datautilities` module turns a raw CAPTURE-24 participant
+csv (``time``, ``x``, ``y``, ``z``, ``annotation`` columns, with annotations
+like ``"7030 sleeping;MET 0.95"``) into the aligned (time, hierarchy)
+streams consumed by the models:
+
+.. code-block:: python
+
+   import pandas as pd
+   from pymaslow import datautilities
+
+   data = pd.read_csv("P001/P001.csv")
+   data["time"] = pd.to_datetime(data["time"])
+   data = data.sort_values("time")
+
+   # parse annotations, look up compendium codes, attach hierarchy labels
+   out = datautilities.capture24_extract_time_hierarchy(data)
+   TS_unix, TS_seconds, FLAGS, MHNS, idxs_of_code, effective_idxs = out
+
+   # split the multi-label stream into per-hierarchy occurrence times
+   moments = datautilities.capture24_collect_moments_per_hierarchy(
+       TS_seconds, FLAGS, MHNS
+   )
+   # moments["1"] -> all seconds-of-day at which H1 (physiological) was active
+
+Rows whose annotation code is not found in the compendium are skipped and
+reported via ``effective_idxs``. The compendium defaults to the embedded
+MHN-annotated one; a custom compendium dataframe (with the original xlsx
+column names) can be passed as ``mhn_file_pd``.
 
 Durations: p(d, t)
 ------------------
@@ -243,3 +276,39 @@ estimated by supervised MLE with Laplace smoothing and injected into a
 The ETRI variants load via ``hmm.data_etri`` and
 ``hmm.etri_activity_definitions`` (the 184 ``(action, condition, place)``
 activity tuples).
+
+Sampling a full day
+-------------------
+
+:func:`pymaslow.sampling.sample_sequence` chains the fitted models into a
+generative process: starting from an initial moment ``t0``, it samples the
+need hierarchy from the joint von Mises mixture posterior ``p(h | t)``, the
+activity from the categorical HMM emission ``p(a | h)``, and the duration
+from the positive circular KDE conditional ``p(d | t)``; time then advances
+by the sampled duration and the process repeats (wrapping past midnight
+into the next day):
+
+.. code-block:: python
+
+   from pymaslow import sampling
+
+   # uses the embedded pre-fitted models by default
+   diary = sampling.sample_sequence(t0="02:00", max_days=1, random_state=42)
+
+   for rec in diary[:5]:
+       print(rec["start_time"], rec["hierarchy_name"], rec["activity"],
+             f"{rec['duration_seconds']/60:.0f} min")
+
+Each record carries ``day``, ``start``/``end`` (hours), ``start_time``/
+``end_time`` (``"HH:MM"``), ``hierarchy``/``hierarchy_name``,
+``activity_id``/``activity``, and ``duration_seconds``. Custom models can be
+injected via the ``model_duration`` (a fitted
+:class:`~pymaslow.durations.PositiveCircularKDE`), ``model_categoricalhmm``
+(a fitted :class:`~pymaslow.CategoricalMaslowHMM`), and
+``model_vonmisesmixture`` arguments — the latter accepts the
+``(p_x, models[, best_k])`` tuple returned by
+:func:`~pymaslow.fit_vmmm_dictionary`, a ``{"p_x": ..., "models": ...}``
+dict, or the :mod:`pymaslow.vonMisesMixture` module itself; all default to
+the embedded fitted models. The individual steps are also available as
+:func:`~pymaslow.sampling.sample_hierarchy_given_time` and
+:func:`~pymaslow.sampling.sample_activity_given_hierarchy`.
