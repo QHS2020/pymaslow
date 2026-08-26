@@ -3,14 +3,8 @@ Citation
 
 If you use ``pymaslow`` in academic work, please cite the companion paper:
 
-    Qi, H. *pymaslow: A Python package for temporal modeling of human
-    motivational needs*. Journal of Open Source Software (draft;
-    see ``docs/pymaslow_manuscript/`` in the source repository).
+    Qi, HongSheng. 2026. Pymaslow: A Python Package for Temporal Modeling of Human Motivational Needs. https://github.com/QHS2020/pymaslow.
 
-The package implements the Temporal Maslow Hierarchy framework introduced in:
-
-    Qi, H. *Diurnal Rhythms of Human Motivational Needs: A Computational
-    Framework Based on Temporal Maslow Hierarchy* (manuscript).
 
 BibTeX
 ------
